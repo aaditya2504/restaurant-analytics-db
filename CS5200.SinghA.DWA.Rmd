@@ -1,0 +1,355 @@
+---
+title: 'CS5200 — Assignment: Explore Data Warehouses'
+author: "Aaditya Kumar Singh"
+date: "04-05-26"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(RSQLite)
+library(DBI)
+library(ggplot2)
+library(knitr)
+```
+
+# Question 1:
+
+## Fact Tables and Star Schemas
+
+The technique for modeling data warehouses in relational databases is called dimensional modeling, and the most popular schema is called the star schema. It uses two types of tables in its structure.
+
+Firstly, **fact tables**, which contain records that represent a business transaction – such as sales, rentals, or shipments, alongside some numerical measures, including revenues, quantities, or duration of an event. These numbers will be aggregated using the operations like summing or averaging. Fact tables will also contain foreign keys to dimension tables.
+
+Secondly, **dimension tables**, which give information about each event and serve as additional data for describing it. They tell us who did something, what item was bought, in what location and on what date. Dimensions tables are usually denormalized – have many columns instead of multiple tables – so as not to use complicated joins while analyzing.
+
+"Star" derives from its diagram-like representation where you have a central fact table and dimension tables extending out of it like star arms. The design is simple and straightforward and provides better performance.
+
+## Can OLAP be Accommodated in a Transactional Database?
+
+Strictly speaking, yes, but in practice, no. OLTP is designed for efficient and quick insertions/deletions and retrieval of transactions, whereas OLAP involves heavy querying. You will only slow down your transactions and cause timeout errors if you attempt to run such operations against your transactional database. This is precisely why companies tend to move data from their OLTP systems into a data warehouse.
+
+## Why Opt for Relational Star Schema Instead of NoSQL for OLAP Queries?
+
+There exist plenty of analytics-oriented database systems currently available, yet why would one prefer to stick to good ol’ SQL?
+
+Several reasons come to mind. Firstly, SQL is ubiquitous – the vast majority of analysts and BI software (Tableau, Power BI, Looker, etc.) already support it. Secondly, relational database management systems are quite reliable regarding backups, data protection, and management as a whole. Thirdly, if your dataset ranges from tens of millions to low billions of rows, it can still easily be queried via star schema using any of PostgreSQL or MySQL. The advantages of using NoSQL and/or columnar databases become apparent once you have to deal with petabytes of data or require live streaming capabilities.
+
+# Question 2:
+
+## Definitions
+
+The **data warehouse** is a central storage facility that aggregates, cleanses, and transforms data from various sources into a standardized structure and stores it. It spans all the organization's departments and represents its single source of truth for business intelligence purposes. All data passes through the Extract, Transform, Load (ETL) pipeline before entering the data warehouse to ensure consistency.
+
+In contrast to the full data warehouse, a **data mart** is simply a subset of it that serves the interests of a particular group or department within an organization. For example, the marketing data mart stores information about customers' demographic characteristics and marketing campaign performance metrics. Similarly, the financial data mart holds data related to company revenues and expenses, budgets, etc. Since the data mart only includes data relevant to the team, query execution speed and schema complexity are reduced.
+
+Unlike a data warehouse and data mart, which store data in a standardized form, the **data lake** keeps data in its raw form, regardless of whether it is structured, unstructured, semi-structured, or binary. Thus, no transformations take place while writing data into a data lake. Instead, the structure emerges only during data retrieval ("schema-on-read").
+
+## Practical Examples
+
+In my previous experience working on financial services projects for Empaxis and Synechron, the data I extracted using the ETL pipelines were stored in the company's enterprise data warehouse that would integrate trade data, position data, and reconciliations from different sources. Downstream functions had their data marts – the operation team would use a reconciliation-oriented data mart, whereas the compliance department would have a data mart that includes flagged transactions only.
+
+For the data lake definition, consider Netflix storing raw events, viewing logs, and other data about its viewers directly on AWS S3. The data scientists access the raw files in the data lake and perform any required transformation to train their recommendations models.
+
+## Recommended Resource
+
+Check out this video for a side-by-side comparison of data warehouse, data lake, and data mart:
+
+**"Data Warehouse vs Data Lake vs Data Mart"** by Alex the Analyst:
+[https://www.youtube.com/watch?v=HMOBiDY3kQo](https://www.youtube.com/watch?v=HMOBiDY3kQo)
+
+# Question 3: 
+
+## Analysis Question
+
+Question that needs answering: **How is rental revenue distributed according to months, stores, categories of films, and individual staff members?** This analysis can help us understand trends and seasonality, compare the performance of stores, find out what film categories earn the most money, and assess individual contribution of staff members.
+
+## Star Schema
+
+### Fact Table: `rental_facts`
+
+Grain: **One record per month per store per film category per individual staff member.** The level of monthly aggregation provides sufficient granularity while avoiding overly large data sets.
+
+**Measures:**
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `total_revenue` | DECIMAL | Sum of payment amounts |
+| `num_rentals` | INTEGER | Count of rentals |
+| `avg_rental_duration_days` | DECIMAL | Average days between rental and return |
+
+**Dimension foreign keys:**
+
+| Column | References |
+|--------|------------|
+| `time_id` | `dim_time` |
+| `store_id` | `dim_store` |
+| `category_id` | `dim_category` |
+| `staff_id` | `dim_staff` |
+
+### Dimension Tables
+
+**`dim_time`** — One row per distinct (month, year) pair from the rental data. Supports grouping by month, year, or both.
+
+**`dim_store`** — Store ID and manager name. Only two stores in Sakila, but the design scales.
+
+**`dim_category`** — The 16 film genre categories from Sakila (Action, Comedy, Drama, etc.).
+
+**`dim_staff`** — Staff name and which store they work at.
+
+### Design Justification
+
+The design follows Kimball star schema design where I have used denormalized dimensions to join the central fact table. The reason why monthly grain was selected over daily grain is that daily grain will only increase the number of rows but not add much to the analytics aspect of the database. Film category has been used over film title because information at the category level is more valuable as compared to individual films; if Sports films make the highest revenue, it makes sense for inventory purposes.
+
+# Question 4:
+
+## Connect to Both Databases
+
+```{r connect}
+sakila_con <- dbConnect(SQLite(), "sakila.db")
+
+if (file.exists("SakilaOLAP.db")) file.remove("SakilaOLAP.db")
+olap_con <- dbConnect(SQLite(), "SakilaOLAP.db")
+```
+
+## Create Dimension Tables
+
+```{r create-dimensions}
+dbExecute(olap_con, "
+  CREATE TABLE dim_time (
+    time_id     INTEGER PRIMARY KEY AUTOINCREMENT,
+    month       INTEGER NOT NULL,
+    year        INTEGER NOT NULL,
+    month_name  TEXT    NOT NULL,
+    UNIQUE(month, year)
+  )
+")
+
+dbExecute(olap_con, "
+  CREATE TABLE dim_store (
+    store_id      INTEGER PRIMARY KEY,
+    manager_name  TEXT NOT NULL
+  )
+")
+
+dbExecute(olap_con, "
+  CREATE TABLE dim_category (
+    category_id   INTEGER PRIMARY KEY,
+    category_name TEXT NOT NULL
+  )
+")
+
+dbExecute(olap_con, "
+  CREATE TABLE dim_staff (
+    staff_id    INTEGER PRIMARY KEY,
+    staff_name  TEXT    NOT NULL,
+    store_id    INTEGER NOT NULL
+  )
+")
+```
+
+## Create Fact Table
+
+```{r create-fact}
+dbExecute(olap_con, "
+  CREATE TABLE rental_facts (
+    fact_id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+    time_id                  INTEGER NOT NULL,
+    store_id                 INTEGER NOT NULL,
+    category_id              INTEGER NOT NULL,
+    staff_id                 INTEGER NOT NULL,
+    total_revenue            REAL    NOT NULL,
+    num_rentals              INTEGER NOT NULL,
+    avg_rental_duration_days REAL,
+    FOREIGN KEY (time_id)     REFERENCES dim_time(time_id),
+    FOREIGN KEY (store_id)    REFERENCES dim_store(store_id),
+    FOREIGN KEY (category_id) REFERENCES dim_category(category_id),
+    FOREIGN KEY (staff_id)    REFERENCES dim_staff(staff_id)
+  )
+")
+```
+
+## Populate Dimension Tables
+
+```{r populate-dimensions}
+time_data <- dbGetQuery(sakila_con, "
+  SELECT DISTINCT
+    CAST(strftime('%m', rental_date) AS INTEGER) AS month,
+    CAST(strftime('%Y', rental_date) AS INTEGER) AS year,
+    CASE CAST(strftime('%m', rental_date) AS INTEGER)
+      WHEN 1  THEN 'January'   WHEN 2  THEN 'February'
+      WHEN 3  THEN 'March'     WHEN 4  THEN 'April'
+      WHEN 5  THEN 'May'       WHEN 6  THEN 'June'
+      WHEN 7  THEN 'July'      WHEN 8  THEN 'August'
+      WHEN 9  THEN 'September' WHEN 10 THEN 'October'
+      WHEN 11 THEN 'November'  WHEN 12 THEN 'December'
+    END AS month_name
+  FROM rental
+  ORDER BY year, month
+")
+dbWriteTable(olap_con, "dim_time", time_data, append = TRUE, row.names = FALSE)
+kable(dbGetQuery(olap_con, "SELECT * FROM dim_time"), caption = "dim\\_time")
+
+store_data <- dbGetQuery(sakila_con, "
+  SELECT s.store_id,
+         st.first_name || ' ' || st.last_name AS manager_name
+  FROM store s
+  JOIN staff st ON s.manager_staff_id = st.staff_id
+")
+dbWriteTable(olap_con, "dim_store", store_data, append = TRUE, row.names = FALSE)
+kable(dbGetQuery(olap_con, "SELECT * FROM dim_store"), caption = "dim\\_store")
+
+cat_data <- dbGetQuery(sakila_con, "
+  SELECT category_id, name AS category_name
+  FROM category
+")
+dbWriteTable(olap_con, "dim_category", cat_data, append = TRUE, row.names = FALSE)
+kable(dbGetQuery(olap_con, "SELECT * FROM dim_category"), caption = "dim\\_category")
+
+staff_data <- dbGetQuery(sakila_con, "
+  SELECT staff_id,
+         first_name || ' ' || last_name AS staff_name,
+         store_id
+  FROM staff
+")
+dbWriteTable(olap_con, "dim_staff", staff_data, append = TRUE, row.names = FALSE)
+kable(dbGetQuery(olap_con, "SELECT * FROM dim_staff"), caption = "dim\\_staff")
+```
+
+## Populate Fact Table
+
+The fact table pulls from `rental`, `payment`, `inventory`, and `film_category` in the Sakila database, aggregating by month/year, store, category, and staff.
+
+```{r populate-facts}
+facts <- dbGetQuery(sakila_con, "
+  SELECT
+    CAST(strftime('%m', r.rental_date) AS INTEGER) AS month,
+    CAST(strftime('%Y', r.rental_date) AS INTEGER) AS year,
+    i.store_id,
+    fc.category_id,
+    r.staff_id,
+    SUM(p.amount)        AS total_revenue,
+    COUNT(r.rental_id)   AS num_rentals,
+    AVG(JULIANDAY(r.return_date) - JULIANDAY(r.rental_date)) AS avg_rental_duration_days
+  FROM rental r
+    JOIN payment p        ON r.rental_id   = p.rental_id
+    JOIN inventory i      ON r.inventory_id = i.inventory_id
+    JOIN film_category fc ON i.film_id      = fc.film_id
+  WHERE r.return_date IS NOT NULL
+  GROUP BY month, year, i.store_id, fc.category_id, r.staff_id
+  ORDER BY year, month, i.store_id, fc.category_id, r.staff_id
+")
+
+time_lookup <- dbGetQuery(olap_con, "SELECT time_id, month, year FROM dim_time")
+facts <- merge(facts, time_lookup, by = c("month", "year"))
+
+facts_insert <- facts[, c("time_id", "store_id", "category_id", "staff_id",
+                           "total_revenue", "num_rentals", "avg_rental_duration_days")]
+dbWriteTable(olap_con, "rental_facts", facts_insert, append = TRUE, row.names = FALSE)
+
+cat("Loaded", nrow(facts_insert), "rows into rental_facts\n")
+kable(head(dbGetQuery(olap_con, "
+  SELECT f.fact_id, t.month_name, t.year, s.manager_name AS store,
+         c.category_name, st.staff_name,
+         ROUND(f.total_revenue, 2) AS revenue,
+         f.num_rentals,
+         ROUND(f.avg_rental_duration_days, 1) AS avg_days
+  FROM rental_facts f
+    JOIN dim_time t      ON f.time_id     = t.time_id
+    JOIN dim_store s     ON f.store_id    = s.store_id
+    JOIN dim_category c  ON f.category_id = c.category_id
+    JOIN dim_staff st    ON f.staff_id    = st.staff_id
+  ORDER BY t.year, t.month, s.store_id, c.category_name
+"), 15), caption = "Sample rows from rental\\_facts")
+```
+
+# Question 5: Analytics
+
+## What is the total rental revenue per month across all stores?
+
+```{r monthly-revenue}
+monthly <- dbGetQuery(olap_con, "
+  SELECT t.year, t.month, t.month_name,
+         SUM(f.total_revenue) AS total_revenue,
+         SUM(f.num_rentals)   AS total_rentals
+  FROM rental_facts f
+    JOIN dim_time t ON f.time_id = t.time_id
+  GROUP BY t.year, t.month, t.month_name
+  ORDER BY t.year, t.month
+")
+
+monthly$label <- paste0(substr(monthly$month_name, 1, 3), " ", monthly$year)
+monthly$label <- factor(monthly$label, levels = monthly$label)
+
+kable(monthly[, c("label", "total_revenue", "total_rentals")],
+      col.names = c("Month", "Total Revenue ($)", "Total Rentals"),
+      caption = "Monthly Revenue and Rental Counts")
+```
+
+```{r monthly-revenue-plot, fig.width=9, fig.height=5}
+ggplot(monthly, aes(x = label, y = total_revenue)) +
+  geom_col(fill = "#2196F3", width = 0.7) +
+  geom_text(aes(label = paste0("$", formatC(total_revenue, format = "f",
+                                             digits = 0, big.mark = ","))),
+            vjust = -0.5, size = 3.2) +
+  labs(title = "Monthly Rental Revenue",
+       subtitle = "Sakila Database — All Stores Combined",
+       x = "Month", y = "Revenue ($)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        plot.title = element_text(face = "bold", size = 14))
+```
+
+## Revenue by Film Category
+
+```{r category-revenue, fig.width=9, fig.height=5}
+by_cat <- dbGetQuery(olap_con, "
+  SELECT c.category_name,
+         SUM(f.total_revenue) AS total_revenue,
+         SUM(f.num_rentals)   AS total_rentals
+  FROM rental_facts f
+    JOIN dim_category c ON f.category_id = c.category_id
+  GROUP BY c.category_name
+  ORDER BY total_revenue DESC
+")
+
+kable(by_cat, col.names = c("Category", "Total Revenue ($)", "Total Rentals"),
+      caption = "Revenue by Film Category")
+
+ggplot(by_cat, aes(x = reorder(category_name, total_revenue), y = total_revenue)) +
+  geom_col(fill = "#4CAF50", width = 0.7) +
+  coord_flip() +
+  labs(title = "Total Revenue by Film Category",
+       subtitle = "Sakila Database — All Time",
+       x = "Category", y = "Revenue ($)") +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold", size = 14))
+```
+
+## Staff Performance Comparison
+
+```{r staff-performance, fig.width=9, fig.height=5}
+by_staff <- dbGetQuery(olap_con, "
+  SELECT st.staff_name, ds.manager_name AS store_manager,
+         SUM(f.total_revenue) AS total_revenue,
+         SUM(f.num_rentals)   AS total_rentals,
+         ROUND(SUM(f.total_revenue) / SUM(f.num_rentals), 2) AS avg_revenue_per_rental
+  FROM rental_facts f
+    JOIN dim_staff st  ON f.staff_id = st.staff_id
+    JOIN dim_store ds  ON f.store_id = ds.store_id
+  GROUP BY st.staff_name, ds.manager_name
+")
+
+kable(by_staff,
+      col.names = c("Staff", "Store Manager", "Total Revenue ($)",
+                     "Total Rentals", "Avg $/Rental"),
+      caption = "Staff Performance Summary")
+```
+
+# Cleanup
+
+```{r disconnect}
+dbDisconnect(sakila_con)
+dbDisconnect(olap_con)
+```
+

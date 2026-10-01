@@ -1,0 +1,192 @@
+---
+title: "Database Schema Design & Normalization"
+author: "Aaditya Kumar Singh"
+subtitle: CS5200 Practicum I
+---
+
+```{r setup, include=FALSE}
+# No code is shown in this document – design and normalization only
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+## Data Sources
+
+This practicum uses two data sources:
+
+**1. CSV File** (`restaurant-visits-209874.csv`): Contains 209,874 visit records
+exported from a third-party point-of-sale system. Each row represents one
+dining visit with the following columns: RestaurantID, ServerEmpID, ServerName,
+VisitDate, VisitTime, MealType, PartySize, WaitTime, CustomerName,
+CustomerPhone, CustomerEmail, LoyaltyMember, FoodBill, TipAmount,
+FoodDiscountPercentage, PaymentMethod, orderedAlcohol, AlcoholBill.
+
+**2. SQLite Database** (`restaurants-db-02102026.sqlitedb`): Contains two tables:
+
+- `restaurants`: rID, RestaurantName, City, State, hasTableService (14 rows)
+- `servers`: EmpID, ServerName, StartDateHired, EndDateHired, HourlyRate,
+  BirthDate, SSN, rID (67 rows)
+
+---
+
+## Part B.1 – Functional Dependencies
+
+Combining all attributes from both sources, the universal relation $R$ is:
+
+$$R(\text{rID},\ \text{RestaurantName},\ \text{City},\ \text{State},\ \text{hasTableService},$$
+$$\text{EmpID},\ \text{ServerName},\ \text{BirthDate},\ \text{SSN},\ \text{HourlyRate},\ \text{StartDateHired},\ \text{EndDateHired},$$
+$$\text{VisitDate},\ \text{VisitTime},\ \text{MealType},\ \text{PartySize},\ \text{WaitTime},$$
+$$\text{CustomerName},\ \text{CustomerPhone},\ \text{CustomerEmail},\ \text{LoyaltyMember},$$
+$$\text{FoodBill},\ \text{TipAmount},\ \text{FoodDiscountPercentage},\ \text{PaymentMethod},\ \text{orderedAlcohol},\ \text{AlcoholBill})$$
+
+The following functional dependencies (FDs) hold:
+
+**FD1** – Restaurant ID determines all restaurant attributes:
+$$\text{rID} \rightarrow \text{RestaurantName},\ \text{City},\ \text{State},\ \text{hasTableService}$$
+
+*Each restaurant ID uniquely identifies one restaurant and its location details.*
+
+**FD2** – Employee ID determines all server attributes:
+$$\text{EmpID} \rightarrow \text{ServerName},\ \text{BirthDate},\ \text{SSN},\ \text{HourlyRate},\ \text{StartDateHired},\ \text{EndDateHired},\ \text{rID}$$
+
+*Each employee ID uniquely identifies a server and the restaurant they work at.*
+
+**FD3** – Customer email determines all customer attributes:
+$$\text{CustomerEmail} \rightarrow \text{CustomerName},\ \text{CustomerPhone},\ \text{LoyaltyMember}$$
+
+*A customer's email uniquely identifies them. Anonymous visits (no email) are handled with NULL values.*
+
+**FD4** – Visit ID (synthetic key) determines all visit-level attributes:
+$$\text{VisitID} \rightarrow \text{rID},\ \text{EmpID},\ \text{CustomerEmail},\ \text{VisitDate},\ \text{VisitTime},$$
+$$\text{MealType},\ \text{PartySize},\ \text{WaitTime},\ \text{FoodBill},\ \text{TipAmount},$$
+$$\text{FoodDiscountPercentage},\ \text{PaymentMethod},\ \text{orderedAlcohol},\ \text{AlcoholBill}$$
+
+*Each dining visit is a unique transactional event. A synthetic primary key is used since the CSV has no natural visit identifier.*
+
+**FD5** – Meal type name and ID are mutually determining (lookup table):
+$$\text{MealTypeName} \leftrightarrow \text{MealTypeID}$$
+
+*MealType is a categorical value (Breakfast, Lunch, Dinner) best stored in a lookup table to avoid repeating strings.*
+
+**FD6** – Payment method name and ID are mutually determining (lookup table):
+$$\text{PaymentMethodName} \leftrightarrow \text{PaymentMethodID}$$
+
+*PaymentMethod is categorical (Cash, Credit Card, Mobile Payment, etc.) and stored in a lookup table.*
+
+---
+
+## Part B.2 – 3NF Decomposition
+
+Using the functional dependencies above, the universal relation $R$ is decomposed
+into six relations, each satisfying **Third Normal Form (3NF)**. In 3NF, every
+non-key attribute depends on the key, the whole key, and nothing but the key —
+meaning no partial or transitive dependencies exist.
+
+**Relation 1: restaurants** *(from FD1)*
+
+$$\text{restaurants}(\underline{\text{rid}},\ \text{restaurant\_name},\ \text{city},\ \text{state},\ \text{has\_table\_service})$$
+
+- **Primary Key:** rid
+- All non-key attributes depend solely on rid. No transitive dependencies.
+
+**Relation 2: servers** *(from FD2)*
+
+$$\text{servers}(\underline{\text{emp\_id}},\ \text{server\_name},\ \text{birth\_date},\ \text{ssn},\ \text{hourly\_rate},\ \text{start\_date\_hired},\ \text{end\_date\_hired},\ \text{rid})$$
+
+- **Primary Key:** emp\_id
+- **Foreign Key:** rid $\rightarrow$ restaurants(rid)
+- All non-key attributes depend solely on emp\_id.
+
+**Relation 3: customers** *(from FD3)*
+
+$$\text{customers}(\underline{\text{customer\_id}},\ \text{customer\_name},\ \text{customer\_phone},\ \text{customer\_email},\ \text{loyalty\_member})$$
+
+- **Primary Key:** customer\_id (auto-increment synthetic key)
+- **Unique Constraint:** customer\_email (when not NULL)
+- A synthetic key is used because some customers are anonymous (no email), so email cannot reliably serve as a primary key.
+
+**Relation 4: meal\_types** *(lookup table from FD5)*
+
+$$\text{meal\_types}(\underline{\text{meal\_type\_id}},\ \text{meal\_type\_name})$$
+
+- **Primary Key:** meal\_type\_id (auto-increment)
+- **Unique Constraint:** meal\_type\_name
+- Eliminates repeating string values in the visits table.
+
+**Relation 5: payment\_methods** *(lookup table from FD6)*
+
+$$\text{payment\_methods}(\underline{\text{payment\_method\_id}},\ \text{payment\_method\_name})$$
+
+- **Primary Key:** payment\_method\_id (auto-increment)
+- **Unique Constraint:** payment\_method\_name
+- Eliminates repeating string values in the visits table.
+
+**Relation 6: visits** *(from FD4)*
+
+$$\text{visits}(\underline{\text{visit\_id}},\ \text{rid},\ \text{emp\_id},\ \text{customer\_id},\ \text{visit\_date},\ \text{visit\_time},$$
+$$\text{meal\_type\_id},\ \text{party\_size},\ \text{wait\_time},\ \text{food\_bill},\ \text{tip\_amount},$$
+$$\text{food\_discount\_pct},\ \text{payment\_method\_id},\ \text{ordered\_alcohol},\ \text{alcohol\_bill})$$
+
+- **Primary Key:** visit\_id (auto-increment synthetic key)
+- **Foreign Keys:**
+    - rid $\rightarrow$ restaurants(rid)
+    - emp\_id $\rightarrow$ servers(emp\_id) *(nullable – some visits have no server)*
+    - customer\_id $\rightarrow$ customers(customer\_id) *(nullable – anonymous visits)*
+    - meal\_type\_id $\rightarrow$ meal\_types(meal\_type\_id)
+    - payment\_method\_id $\rightarrow$ payment\_methods(payment\_method\_id)
+- All non-key attributes depend solely on visit\_id with no transitive dependencies.
+
+**Verification of 3NF:** Each relation has a single candidate key as its primary
+key. Every non-key attribute is fully and directly dependent on that primary key,
+with no partial dependencies (no composite keys exist) and no transitive
+dependencies (no non-key attribute determines another non-key attribute).
+Therefore, all six relations satisfy 3NF.
+
+---
+
+## Part B.3 – Entity-Relationship Diagram (ERD)
+
+The ERD below uses IE (Crow's Foot) notation showing all entities, attributes,
+primary keys (PK), foreign keys (FK), data types, and cardinalities.
+
+```{r erd, echo=FALSE, out.width="100%", fig.cap="ERD in Crow's Foot Notation"}
+# Make sure the ERD image file is in your project folder
+knitr::include_graphics("erd_practicum1.png")
+```
+
+### Entity Descriptions
+
+- **restaurants**: Stores information about each restaurant in the management
+  group, including name, location (city, state), and whether table service is
+  offered.
+
+- **servers**: Stores employee records for servers, including pay rate,
+  employment dates, birth date, SSN, and which restaurant they are assigned to.
+
+- **customers**: Stores contact and loyalty information for identifiable
+  customers. Rows with no email represent anonymous diners and use NULL for
+  name, phone, and email.
+
+- **meal\_types**: Lookup table for categorical meal type values (e.g.,
+  Breakfast, Lunch, Dinner). Avoids repeating strings in the visits table.
+
+- **payment\_methods**: Lookup table for categorical payment types (e.g., Cash,
+  Credit Card, Mobile Payment). Same rationale as meal\_types.
+
+- **visits**: The central fact table. Each row is one dining event and links
+  together a restaurant, server, customer, meal type, and payment method with
+  all financial and operational details of that visit.
+
+### Cardinalities
+
+- A **restaurant** has zero or many **servers** (1:N). Each server works at
+  exactly one restaurant.
+- A **restaurant** has zero or many **visits** (1:N). Each visit occurs at
+  exactly one restaurant.
+- A **server** has zero or many **visits** (1:N). A visit may have no server
+  (nullable FK).
+- A **customer** has zero or many **visits** (1:N). A visit may have no
+  customer (nullable FK for anonymous guests).
+- A **meal\_type** is referenced by zero or many **visits** (1:N). Each visit
+  has exactly one meal type.
+- A **payment\_method** is referenced by zero or many **visits** (1:N). Each
+  visit has exactly one payment method.

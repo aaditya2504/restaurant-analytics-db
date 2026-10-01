@@ -1,0 +1,501 @@
+"RestaurantID","ServerEmpID","ServerName","VisitDate","VisitTime","MealType","PartySize","WaitTime","CustomerName","CustomerPhone","CustomerEmail","LoyaltyMember","FoodBill","TipAmount","FoodDiscountPercentage","PaymentMethod","orderedAlcohol","AlcoholBill"
+100,93168,"Martinez, Sophia","03/25/2026","20:16","Dinner",5,3,"","","","FALSE",93.75,22.91,5,"Credit Card","FALSE",0
+108,65343,"Lewis, Ethan","02/13/2026","9:43","Breakfast",6,25,"","","","FALSE",36.84,8.22,0,"Cash","FALSE",0
+110,12576,"Rodriguez, Mason","01/31/2026","20:40","Take-Out",4,39,"Sidney Jackson","(816) 506-2292","sidney.jackson33@example.com","FALSE",73.29,21.53,0,"Cash","FALSE",0
+105,89472,"Mitchell, Hannah K.","02/21/2026","18:00","Dinner",3,40,"Logan Turner","(704) 949-1202","logan.turner34@example.com","TRUE",26.84,2.64,0,"Cash","TRUE",58.35
+109,15456,"Wright, Matthew","01/16/2026","19:14","Take-Out",5,24,"","","","FALSE",93.31,3.87,5,"Mobile Payment","FALSE",0
+108,31135,"Garcia, Daniel","02/09/2026","19:29","Take-Out",4,13,"Jamie White","(371) 879-4296","jamie.white36@example.com","FALSE",116.34,7,0,"Mobile Payment","FALSE",0
+113,34263,"King, Noah","03/03/2026","6:25","Breakfast",2,40,"","","","FALSE",80.44,9.05,0,"Cash","FALSE",0
+107,79430,"Carter, Lucas","03/07/2026","12:37","Lunch",5,37,"Rowan Campbell","(394) 639-7498","rowan.campbell38@example.com","TRUE",117.35,34.09,20,"Credit Card","FALSE",0
+112,66266,"Lewis, Emily","02/17/2026","19:35","Dinner",6,38,"Remy Garcia","(428) 741-5322","remy.garcia39@example.com","FALSE",45.46,4.54,20,"Cash","FALSE",0
+109,38924,"Smith, Emily","03/20/2026","14:56","Lunch",1,3,"","","","FALSE",13.83,3.02,0,"Mobile Payment","FALSE",0
+101,48840,"Harris, Victoria","01/17/2026","14:53","Lunch",1,29,"Kai Thompson","(440) 569-6889","kai.thompson311@example.com","FALSE",100.15,24.67,0,"Credit Card","FALSE",0
+108,19467,"Brown, Olivia","02/22/2026","18:09","Take-Out",7,8,"Jordan Smith","(601) 773-7747","jordan.smith312@example.com","FALSE",85.49,13.85,10,"Mobile Payment","FALSE",0
+108,96172,"Roberts, Scarlett","02/21/2026","9:27","Breakfast",4,15,"Drew Nelson","(312) 711-7301","drew.nelson313@example.com","TRUE",51.18,0.41,15,"Credit Card","FALSE",0
+112,39257,"Robinson, Ava","02/16/2026","18:48","Take-Out",2,18,"Emery Garcia","(938) 584-6799","emery.garcia314@example.com","TRUE",44.76,9.13,20,"Cash","FALSE",0
+103,74726,"Walker, Grace","02/28/2026","21:00","Take-Out",5,27,"Logan Edwards","(483) 702-3834","logan.edwards315@example.com","TRUE",54.63,5.35,0,"Credit Card","TRUE",31.52
+112,39257,"Robinson, Ava","03/08/2026","18:41","Dinner",3,40,"Skyler Anderson","(717) 559-5256","skyler.anderson316@example.com","FALSE",51.6,10.5,20,"Credit Card","TRUE",11.95
+112,71500,"Nelson, Harper","01/29/2026","8:58","Breakfast",7,39,"Devon Evans","(829) 914-1379","devon.evans317@example.com","TRUE",49.67,3.95,5,"Mobile Payment","TRUE",35.06
+103,70761,"Allen, Amelia","02/06/2026","21:04","Take-Out",5,25,"Hayden Johnson","(653) 704-2889","hayden.johnson318@example.com","TRUE",68.37,19.46,10,"Credit Card","FALSE",0
+112,66266,"Lewis, Emily","01/03/2026","21:46","Take-Out",3,11,"","","","FALSE",77.68,14.65,10,"Cash","FALSE",0
+105,19226,"Taylor, Ava","03/29/2026","18:56","Dinner",4,25,"Ariel Martinez","(771) 920-9936","ariel.martinez320@example.com","TRUE",42.43,6.31,15,"Credit Card","FALSE",0
+112,66266,"Lewis, Emily","02/08/2026","20:41","Take-Out",4,7,"Sawyer Moore","(555) 747-1383","sawyer.moore321@example.com","TRUE",35.1,9.21,5,"Mobile Payment","FALSE",0
+104,65817,"Turner, Andrew","02/04/2026","9:03","Breakfast",7,39,"Jordan Baker","(335) 976-8438","jordan.baker322@example.com","FALSE",73.26,15.67,0,"Cash","FALSE",0
+104,62800,"Machado, Paula","03/08/2026","10:57","Breakfast",7,14,"Rowan Allen","(797) 642-7107","rowan.allen323@example.com","FALSE",12.06,2.29,15,"Cash","FALSE",0
+108,35565,"Clark, Abigail","02/09/2026","12:34","Lunch",5,11,"Sidney Moore","(628) 490-5977","sidney.moore324@example.com","FALSE",82.54,19.62,0,"Mobile Payment","FALSE",0
+106,51481,"Lee, Liam","03/04/2026","21:53","Dinner",7,44,"Riley Smith","(385) 361-4883","riley.smith325@example.com","TRUE",93.62,23.11,0,"Mobile Payment","FALSE",0
+107,66109,"Green, David","01/09/2026","8:29","Breakfast",7,17,"Carmen Phillips","(343) 960-8150","carmen.phillips326@example.com","FALSE",50.9,4.4,0,"Credit Card","TRUE",13.69
+100,83459,"Walker, Mia","01/11/2026","21:53","Dinner",2,7,"Skyler Hill","(940) 712-4187","skyler.hill327@example.com","FALSE",113.27,8.1,0,"Mobile Payment","FALSE",0
+103,74726,"Walker, Grace","01/23/2026","20:18","Take-Out",8,19,"","","","FALSE",93.39,21.03,0,"Mobile Payment","FALSE",0
+100,83459,"Walker, Mia","01/25/2026","13:22","Lunch",7,1,"","","","FALSE",21.41,5.35,15,"Credit Card","FALSE",0
+104,62800,"Machado, Paula","03/07/2026","8:09","Breakfast",7,31,"Peyton Baker","(250) 516-5122","peyton.baker330@example.com","TRUE",27.01,0.45,20,"Credit Card","FALSE",0
+110,12576,"Rodriguez, Mason","03/18/2026","6:15","Breakfast",7,5,"Robin Smith","(715) 355-6565","robin.smith331@example.com","FALSE",32.37,5.61,5,"Mobile Payment","FALSE",0
+108,31135,"Garcia, Daniel","03/01/2026","11:13","Lunch",4,21,"Sage Perez","(837) 612-1159","sage.perez332@example.com","TRUE",100.29,19.25,0,"Credit Card","TRUE",32.51
+108,65343,"Lewis, Ethan","03/18/2026","12:08","Lunch",2,24,"Emery Thomas","(769) 229-2117","emery.thomas333@example.com","FALSE",31.37,0.95,0,"Mobile Payment","FALSE",0
+109,38924,"Smith, Emily","02/01/2026","9:33","Breakfast",3,26,"Hayden Wright","(523) 980-1540","hayden.wright334@example.com","TRUE",37.05,8.84,5,"Mobile Payment","FALSE",0
+112,47168,"Wilson, James","02/27/2026","7:03","Breakfast",2,31,"Logan Roberts","(212) 730-1385","logan.roberts335@example.com","FALSE",61.85,4.28,5,"Credit Card","FALSE",0
+100,83459,"Walker, Mia","03/09/2026","11:56","Lunch",4,43,"Skyler Miller","(796) 282-5459","skyler.miller336@example.com","TRUE",25.32,6.76,0,"Mobile Payment","TRUE",20.97
+100,83459,"Walker, Mia","02/06/2026","21:20","Dinner",6,41,"Shay Thomas","(509) 727-2658","shay.thomas337@example.com","TRUE",75.05,5.62,15,"Mobile Payment","FALSE",0
+104,62800,"Machado, Paula","02/16/2026","9:58","Breakfast",8,34,"","","","FALSE",10.98,1.97,10,"Cash","FALSE",0
+110,51919,"Hernandez, Charlotte","03/17/2026","10:46","Breakfast",2,38,"Alex Thompson","(659) 734-1488","alex.thompson339@example.com","FALSE",53.29,8.8,5,"Mobile Payment","TRUE",23.21
+107,80897,"Martinez, Elijah","03/11/2026","12:05","Lunch",8,29,"Parker Nelson","(324) 229-2321","parker.nelson340@example.com","FALSE",78.63,3.9,0,"Credit Card","TRUE",28.77
+100,80238,"Johnson, Michael","02/13/2026","12:27","Lunch",3,13,"Robin Evans","(313) 769-1489","robin.evans341@example.com","TRUE",82.02,6.16,10,"Cash","TRUE",53.59
+101,26008,"Hall, Noah K.","01/27/2026","18:56","Dinner",1,32,"Jamie Allen","(683) 648-1402","jamie.allen342@example.com","FALSE",99.44,23.78,0,"Cash","FALSE",0
+108,96172,"Roberts, Scarlett","03/03/2026","14:25","Lunch",6,27,"Avery Davis","(754) 902-8598","avery.davis343@example.com","FALSE",72.13,10.2,15,"Cash","FALSE",0
+113,42819,"Lopez, Isabella","01/04/2026","20:08","Dinner",8,7,"","","","FALSE",62.07,15.16,15,"Mobile Payment","FALSE",0
+100,80238,"Johnson, Michael","01/11/2026","11:30","Lunch",4,16,"Dakota Rodriguez","(216) 994-1784","dakota.rodriguez345@example.com","TRUE",89.13,2.81,10,"Cash","TRUE",50.62
+110,97341,"Gerstenberger, Mischa","03/31/2026","13:22","Lunch",7,26,"","","","FALSE",86.33,15.66,5,"Credit Card","FALSE",0
+101,26008,"Hall, Noah K.","02/09/2026","19:16","Dinner",3,16,"Kendall Wright","(480) 541-9869","kendall.wright347@example.com","TRUE",30.7,7.91,0,"Cash","FALSE",0
+112,47168,"Wilson, James","01/16/2026","6:18","Breakfast",3,17,"","","","FALSE",113.63,27,0,"Credit Card","FALSE",0
+109,15456,"Wright, Matthew","03/31/2026","9:59","Breakfast",6,11,"Sidney Perez","(259) 740-9501","sidney.perez349@example.com","TRUE",33.36,9.62,0,"Mobile Payment","TRUE",36.98
+101,26008,"Hall, Noah K.","01/22/2026","9:11","Breakfast",3,0,"Robin Parker","(504) 849-4840","robin.parker350@example.com","FALSE",105.54,17.62,15,"Mobile Payment","FALSE",0
+103,70761,"Allen, Amelia","01/15/2026","8:58","Breakfast",4,8,"Shay Adams","(608) 842-7539","shay.adams351@example.com","FALSE",44.61,11.47,0,"Credit Card","TRUE",34.5
+102,18984,"Scott, Ella","02/04/2026","20:40","Take-Out",2,5,"Riley Nelson","(546) 778-1531","riley.nelson352@example.com","FALSE",62.95,3.3,20,"Mobile Payment","FALSE",0
+104,65817,"Turner, Andrew","02/07/2026","13:39","Lunch",3,29,"","","","FALSE",54.84,12.09,20,"Mobile Payment","TRUE",40.08
+106,69210,"Hernandez, Charlotte","03/12/2026","13:55","Lunch",2,32,"Kai Jackson","(964) 431-2061","kai.jackson354@example.com","FALSE",24.34,3.33,0,"Mobile Payment","TRUE",25.25
+106,36759,"Moore, William","01/23/2026","12:02","Lunch",5,16,"","","","FALSE",13.6,2.6,0,"Credit Card","FALSE",0
+110,12576,"Rodriguez, Mason","02/10/2026","21:04","Dinner",4,12,"","","","FALSE",51.66,0.88,10,"Cash","TRUE",16.17
+111,81251,"Patel, Vishnu","01/19/2026","8:41","Breakfast",5,21,"Dakota Lee","(750) 491-6643","dakota.lee357@example.com","FALSE",60.83,15.62,15,"Cash","FALSE",0
+106,93071,"Anderson, Alexander","02/02/2026","21:50","Dinner",5,16,"","","","FALSE",89.76,8.31,15,"Cash","FALSE",0
+101,26008,"Hall, Noah K.","03/05/2026","14:52","Lunch",7,41,"","","","FALSE",20.7,4.55,15,"Credit Card","TRUE",35.1
+108,19467,"Brown, Olivia","02/04/2026","14:03","Lunch",6,13,"Kendall White","(454) 351-1867","kendall.white360@example.com","FALSE",93.49,21.79,10,"Cash","FALSE",0
+108,55901,"Carter, Grace","03/28/2026","20:24","Take-Out",7,24,"Nico Moore","(489) 669-8531","nico.moore361@example.com","FALSE",42.59,3.6,0,"Credit Card","TRUE",27.8
+101,48840,"Harris, Victoria","01/09/2026","11:27","Lunch",5,34,"Shannon Baker","(281) 990-4561","shannon.baker362@example.com","TRUE",19.4,3.87,5,"Mobile Payment","FALSE",0
+109,35623,"Young, Jackson","03/31/2026","20:29","Dinner",1,19,"Quinn Smith","(761) 937-2846","quinn.smith363@example.com","FALSE",81.52,5.82,15,"Cash","FALSE",0
+107,27348,"Allen, Zoe","03/07/2026","13:50","Lunch",8,30,"","","","FALSE",91.37,6.76,5,"Cash","FALSE",0
+103,74772,"Green, Jacob","03/13/2026","18:58","Dinner",7,40,"Remy Jones","(381) 517-4259","remy.jones365@example.com","TRUE",78.62,6.12,20,"Credit Card","TRUE",33.65
+106,55800,"Clark, Sophia","02/23/2026","18:25","Take-Out",6,2,"Harper Green","(333) 333-7424","harper.green366@example.com","FALSE",9.65,0.4,15,"Cash","FALSE",0
+104,65817,"Turner, Andrew","03/28/2026","7:22","Breakfast",4,5,"Tatum Hill","(893) 771-9146","tatum.hill367@example.com","TRUE",76.93,20.63,0,"Mobile Payment","FALSE",0
+103,70761,"Allen, Amelia","01/24/2026","13:21","Lunch",1,10,"Quinn Campbell","(863) 746-2820","quinn.campbell368@example.com","FALSE",82.27,18.79,0,"Cash","FALSE",0
+113,12815,"Baker, Benjamin","02/10/2026","6:39","Breakfast",6,35,"Tatum Taylor","(951) 274-7300","tatum.taylor369@example.com","TRUE",95.72,22.78,10,"Mobile Payment","TRUE",55.34
+105,57148,"Thomas, Benjamin","03/21/2026","9:12","Breakfast",1,41,"Rowan Phillips","(832) 786-7070","rowan.phillips370@example.com","TRUE",10.52,1.1,15,"Credit Card","FALSE",0
+101,48840,"Harris, Victoria","03/03/2026","13:43","Lunch",5,45,"","","","FALSE",13.51,1.76,10,"Cash","FALSE",0
+107,80897,"Martinez, Elijah","01/30/2026","20:23","Dinner",5,39,"","","","FALSE",14.21,0.2,0,"Mobile Payment","FALSE",0
+107,27348,"Allen, Zoe","03/19/2026","20:24","Take-Out",7,25,"Finley Miller","(807) 562-8342","finley.miller373@example.com","FALSE",42.93,4.02,10,"Mobile Payment","TRUE",34.62
+108,13056,"Baker, Samuel","01/31/2026","19:38","Take-Out",1,37,"Ariel Young","(299) 748-2601","ariel.young374@example.com","TRUE",60.97,4.38,0,"Cash","FALSE",0
+104,65817,"Turner, Andrew","01/10/2026","18:47","Dinner",8,39,"Jordan Adams","(581) 367-2599","jordan.adams375@example.com","FALSE",75.05,0.66,20,"Mobile Payment","FALSE",0
+109,15456,"Wright, Matthew","01/24/2026","9:18","Breakfast",8,10,"Kai Allen","(334) 372-6504","kai.allen376@example.com","FALSE",110,31.61,0,"Cash","FALSE",0
+105,34552,"Nelson, Isabella","01/09/2026","6:10","Breakfast",4,28,"Milan Martin","(865) 956-4385","milan.martin377@example.com","TRUE",11.41,3.42,20,"Cash","TRUE",16.2
+103,74772,"Green, Jacob","02/23/2026","17:21","Dinner",4,43,"","","","FALSE",10.26,1.06,10,"Credit Card","FALSE",0
+112,66266,"Lewis, Emily","01/15/2026","17:25","Take-Out",4,14,"Robin Carter","(321) 308-1460","robin.carter379@example.com","TRUE",69.11,18.91,20,"Cash","FALSE",0
+102,46646,"Perez, Jacob","02/18/2026","10:52","Breakfast",7,3,"","","","FALSE",114.92,4.58,5,"Mobile Payment","TRUE",52.72
+102,18984,"Scott, Ella","01/20/2026","18:28","Take-Out",1,17,"Rowan Perez","(855) 820-4786","rowan.perez381@example.com","TRUE",79.42,9.8,0,"Credit Card","FALSE",0
+109,23112,"Hernandez, Charlotte","01/10/2026","11:41","Lunch",7,5,"Oakley King","(458) 673-3418","oakley.king382@example.com","TRUE",60.23,12.29,15,"Cash","TRUE",47.2
+101,26008,"Hall, Noah K.","03/29/2026","13:17","Lunch",6,35,"Milan Mitchell","(467) 869-8813","milan.mitchell383@example.com","FALSE",27.28,1.15,10,"Credit Card","TRUE",43.14
+113,42819,"Lopez, Isabella","01/13/2026","21:58","Take-Out",4,15,"","","","FALSE",56.98,4.68,5,"Cash","TRUE",5.86
+103,74772,"Green, Jacob","02/23/2026","11:00","Lunch",4,21,"Devon Martin","(739) 950-1267","devon.martin385@example.com","TRUE",27.75,3.13,0,"Mobile Payment","TRUE",8.64
+101,93883,"Adams, Chloe","02/25/2026","6:02","Breakfast",6,24,"Jamie Rodriguez","(416) 750-2124","jamie.rodriguez386@example.com","TRUE",39.58,7.82,0,"Cash","TRUE",19.18
+107,79430,"Carter, Lucas","03/17/2026","14:10","Lunch",7,42,"Phoenix Smith","(409) 983-8414","phoenix.smith387@example.com","FALSE",25.29,1.61,10,"Mobile Payment","TRUE",10.56
+108,55901,"Carter, Grace","02/13/2026","9:19","Breakfast",5,35,"Blake Davis","(730) 710-7446","blake.davis388@example.com","TRUE",10.52,2.62,5,"Credit Card","FALSE",0
+107,27348,"Allen, Zoe","02/09/2026","6:46","Breakfast",8,28,"","","","FALSE",19.58,0.9,0,"Cash","FALSE",0
+106,98142,"Scott, Olivia","03/19/2026","10:52","Breakfast",2,37,"Oakley Roberts","(433) 245-3065","oakley.roberts390@example.com","TRUE",63.11,5.22,5,"Mobile Payment","TRUE",8.47
+105,65176,"Adams, Chloe","02/19/2026","13:29","Lunch",4,35,"Ellis Williams","(631) 674-7834","ellis.williams391@example.com","TRUE",77.64,7.86,0,"Credit Card","TRUE",29.97
+102,60922,"Hall, Lucas","01/23/2026","13:42","Lunch",6,13,"Nico Wilson","(887) 398-9480","nico.wilson392@example.com","TRUE",115.47,7.43,0,"Mobile Payment","TRUE",9.36
+102,60922,"Hall, Lucas","01/14/2026","11:55","Lunch",6,10,"Taylor Wilson","(464) 616-1984","taylor.wilson393@example.com","TRUE",104.91,7.6,10,"Credit Card","FALSE",0
+100,80238,"Johnson, Michael","01/30/2026","21:23","Take-Out",1,28,"Casey Miller","(504) 907-5447","casey.miller394@example.com","FALSE",14.86,4.37,0,"Mobile Payment","TRUE",7.28
+108,31135,"Garcia, Daniel","03/31/2026","12:20","Lunch",7,38,"Riley Thomas","(688) 440-1188","riley.thomas395@example.com","TRUE",75.18,4.88,20,"Mobile Payment","TRUE",23.97
+110,51919,"Hernandez, Charlotte","03/19/2026","14:45","Lunch",2,30,"Ellis Turner","(918) 405-1273","ellis.turner396@example.com","FALSE",29.04,4.11,15,"Credit Card","FALSE",0
+104,62800,"Machado, Paula","02/05/2026","19:49","Take-Out",4,14,"Dakota Turner","(467) 927-4565","dakota.turner397@example.com","FALSE",100.91,22.42,10,"Credit Card","FALSE",0
+108,13056,"Baker, Samuel","03/23/2026","10:22","Breakfast",2,31,"","","","FALSE",9.22,0.92,10,"Mobile Payment","FALSE",0
+100,47180,"King, Lily","01/12/2026","7:04","Breakfast",7,39,"Tatum Mitchell","(824) 981-2807","tatum.mitchell399@example.com","FALSE",63.37,13.38,10,"Mobile Payment","FALSE",0
+110,12576,"Rodriguez, Mason","02/05/2026","11:31","Lunch",1,30,"Parker Miller","(912) 993-2162","parker.miller3100@example.com","TRUE",31.42,8.79,20,"Mobile Payment","TRUE",44.67
+101,93883,"Adams, Chloe","01/31/2026","21:20","Dinner",8,5,"Morgan Parker","(762) 741-2325","morgan.parker3101@example.com","FALSE",91.16,9.13,20,"Credit Card","FALSE",0
+103,74772,"Green, Jacob","01/19/2026","6:01","Breakfast",7,36,"Logan Parker","(716) 531-3696","logan.parker3102@example.com","TRUE",77.26,8.06,10,"Credit Card","TRUE",51.44
+100,83459,"Walker, Mia","03/28/2026","17:52","Dinner",7,36,"Avery Baker","(878) 650-8247","avery.baker3103@example.com","TRUE",69.67,12.38,5,"Credit Card","TRUE",18.01
+106,98142,"Scott, Olivia","03/17/2026","21:27","Take-Out",1,41,"","","","FALSE",26.26,4.14,0,"Cash","TRUE",40.63
+106,86369,"Lopez, Isabella","02/07/2026","7:03","Breakfast",5,35,"","","","FALSE",111.11,25.21,0,"Credit Card","FALSE",0
+108,13056,"Baker, Samuel","02/07/2026","18:21","Dinner",5,32,"Carmen Nelson","(921) 779-1581","carmen.nelson3106@example.com","TRUE",47.46,3.3,20,"Cash","TRUE",30.2
+111,81251,"Patel, Vishnu","02/19/2026","13:08","Lunch",4,17,"Reese Lewis","(405) 553-1041","reese.lewis3107@example.com","FALSE",79.77,8.95,0,"Credit Card","FALSE",0
+111,81251,"Patel, Vishnu","01/31/2026","18:37","Dinner",2,39,"Parker Martinez","(467) 415-2832","parker.martinez3108@example.com","FALSE",64.36,17.21,0,"Credit Card","TRUE",12.73
+108,65343,"Lewis, Ethan","01/23/2026","20:40","Take-Out",5,35,"Logan Campbell","(607) 810-2388","logan.campbell3109@example.com","TRUE",71.17,17.33,10,"Cash","TRUE",9.56
+109,23112,"Hernandez, Charlotte","02/18/2026","7:03","Breakfast",7,35,"","","","FALSE",81.03,19.68,10,"Credit Card","FALSE",0
+112,39257,"Robinson, Ava","03/01/2026","7:20","Breakfast",3,12,"Riley Wilson","(394) 964-3475","riley.wilson3111@example.com","TRUE",28.3,5.14,15,"Credit Card","FALSE",0
+106,62293,"Nelson, Harper","03/08/2026","21:51","Dinner",7,27,"Logan Wilson","(551) 623-4814","logan.wilson3112@example.com","TRUE",63.44,14.63,0,"Cash","TRUE",49.43
+103,74726,"Walker, Grace","01/15/2026","17:50","Dinner",1,28,"Marley Thomas","(943) 585-9707","marley.thomas3113@example.com","TRUE",111.09,7.52,20,"Mobile Payment","TRUE",28.78
+103,44667,"Mitchell, Samuel","02/27/2026","6:58","Breakfast",6,22,"Parker Taylor","(883) 298-9284","parker.taylor3114@example.com","FALSE",95.21,0.96,0,"Cash","FALSE",0
+112,66266,"Lewis, Emily","02/18/2026","12:50","Lunch",7,41,"Blake Lewis","(476) 341-2075","blake.lewis3115@example.com","TRUE",77.23,7.08,15,"Cash","TRUE",10.81
+101,48840,"Harris, Victoria","02/12/2026","18:13","Dinner",3,42,"Alex White","(868) 729-7195","alex.white3116@example.com","TRUE",8.76,1.19,0,"Mobile Payment","FALSE",0
+109,35623,"Young, Jackson","02/11/2026","12:49","Lunch",3,29,"","","","FALSE",81.23,14.35,0,"Cash","FALSE",0
+103,44667,"Mitchell, Samuel","01/24/2026","18:03","Dinner",8,30,"","","","FALSE",115.61,15.02,15,"Cash","FALSE",0
+106,51481,"Lee, Liam","02/18/2026","21:49","Take-Out",4,38,"Taylor Baker","(376) 721-8917","taylor.baker3119@example.com","TRUE",39.69,3.44,15,"Mobile Payment","FALSE",0
+112,66266,"Lewis, Emily","01/24/2026","10:12","Breakfast",5,2,"Carmen Turner","(213) 255-3499","carmen.turner3120@example.com","TRUE",105.75,29.4,20,"Credit Card","TRUE",32.32
+111,81251,"Patel, Vishnu","01/08/2026","19:51","Take-Out",1,43,"","","","FALSE",14.67,2.81,0,"Credit Card","FALSE",0
+102,60922,"Hall, Lucas","02/25/2026","20:45","Dinner",1,6,"","","","FALSE",52.02,2.27,0,"Credit Card","FALSE",0
+108,55901,"Carter, Grace","02/18/2026","7:01","Breakfast",8,31,"Milan Parker","(384) 489-6340","milan.parker3123@example.com","TRUE",22.12,4.21,0,"Mobile Payment","TRUE",54.25
+105,89472,"Mitchell, Hannah K.","03/03/2026","19:05","Take-Out",6,37,"Sage Williams","(625) 532-4562","sage.williams3124@example.com","TRUE",87.61,7.65,5,"Mobile Payment","TRUE",48.3
+113,12815,"Baker, Benjamin","01/01/2026","21:08","Take-Out",3,20,"Blake Williams","(696) 996-8546","blake.williams3125@example.com","TRUE",80.46,14.75,0,"Credit Card","TRUE",54.19
+111,81251,"Patel, Vishnu","01/05/2026","20:10","Dinner",6,7,"Carmen Mitchell","(294) 588-7802","carmen.mitchell3126@example.com","TRUE",75.86,17.09,15,"Credit Card","FALSE",0
+108,13056,"Baker, Samuel","03/15/2026","21:09","Take-Out",5,25,"Nico Taylor","(202) 396-3787","nico.taylor3127@example.com","FALSE",99.93,18.21,0,"Cash","FALSE",0
+109,23112,"Hernandez, Charlotte","01/23/2026","8:34","Breakfast",3,45,"Sage Martinez","(500) 892-7549","sage.martinez3128@example.com","TRUE",78.44,18.35,10,"Credit Card","TRUE",29.06
+110,34433,"Cheng, Grace","03/07/2026","14:31","Lunch",4,4,"Shannon Brown","(354) 819-1255","shannon.brown3129@example.com","TRUE",89.34,13.26,5,"Credit Card","FALSE",0
+104,62800,"Machado, Paula","02/25/2026","11:22","Lunch",3,39,"Harper Scott","(751) 393-5809","harper.scott3130@example.com","FALSE",86.83,20.15,0,"Cash","FALSE",0
+101,26008,"Hall, Noah K.","01/12/2026","11:00","Lunch",4,10,"Dakota Phillips","(878) 583-8943","dakota.phillips3131@example.com","TRUE",32.14,0.8,0,"Cash","TRUE",33.2
+112,66266,"Lewis, Emily","02/08/2026","20:45","Take-Out",4,29,"","","","FALSE",34.96,0.05,0,"Cash","TRUE",36.49
+112,39257,"Robinson, Ava","02/14/2026","13:47","Lunch",6,34,"Lennox Baker","(414) 375-7231","lennox.baker3133@example.com","FALSE",27.13,4.84,10,"Mobile Payment","FALSE",0
+100,80238,"Johnson, Michael","02/17/2026","11:11","Lunch",2,33,"Alex Hill","(976) 409-9055","alex.hill3134@example.com","TRUE",72.65,20.06,0,"Mobile Payment","TRUE",36.9
+113,12815,"Baker, Benjamin","02/18/2026","21:05","Take-Out",2,30,"Parker Garcia","(206) 647-4873","parker.garcia3135@example.com","TRUE",41.92,0.34,0,"Mobile Payment","FALSE",0
+111,81251,"Patel, Vishnu","01/08/2026","14:49","Lunch",6,42,"Blake Young","(765) 393-7818","blake.young3136@example.com","FALSE",96.49,18.57,15,"Cash","FALSE",0
+100,83459,"Walker, Mia","01/03/2026","10:32","Breakfast",7,0,"","","","FALSE",61.99,8.9,0,"Cash","FALSE",0
+104,65817,"Turner, Andrew","02/04/2026","19:27","Take-Out",8,35,"Remy Baker","(744) 538-9358","remy.baker3138@example.com","TRUE",100.38,11.84,15,"Cash","FALSE",0
+104,62800,"Machado, Paula","03/22/2026","18:06","Dinner",8,4,"Jamie Edwards","(241) 379-8896","jamie.edwards3139@example.com","TRUE",98.43,21.68,10,"Credit Card","TRUE",31.6
+100,93168,"Martinez, Sophia","02/23/2026","17:07","Take-Out",3,36,"Blake Taylor","(411) 464-1233","blake.taylor3140@example.com","FALSE",47.66,9.34,10,"Cash","TRUE",27.05
+107,66109,"Green, David","01/04/2026","6:08","Breakfast",1,10,"Drew Evans","(709) 397-5971","drew.evans3141@example.com","FALSE",74.79,20.28,0,"Cash","TRUE",15.87
+110,12576,"Rodriguez, Mason","01/15/2026","20:14","Dinner",3,13,"Finley Jackson","(493) 422-1102","finley.jackson3142@example.com","FALSE",9.7,1.14,0,"Mobile Payment","FALSE",0
+113,34263,"King, Noah","02/22/2026","13:53","Lunch",5,34,"Blake Martinez","(762) 275-3152","blake.martinez3143@example.com","FALSE",63,10.92,20,"Credit Card","FALSE",0
+103,44667,"Mitchell, Samuel","01/23/2026","17:26","Dinner",6,31,"","","","FALSE",83.45,19.34,5,"Cash","FALSE",0
+106,36759,"Moore, William","03/07/2026","13:59","Lunch",6,37,"Sawyer Moore","(520) 242-5532","sawyer.moore3145@example.com","FALSE",58.29,17.02,20,"Mobile Payment","TRUE",34.68
+113,42819,"Lopez, Isabella","02/10/2026","8:23","Breakfast",7,9,"Robin Moore","(603) 710-8790","robin.moore3146@example.com","TRUE",113.02,22.87,0,"Credit Card","FALSE",0
+103,70761,"Allen, Amelia","01/30/2026","8:52","Breakfast",1,37,"Milan Perez","(532) 806-6578","milan.perez3147@example.com","FALSE",68.2,6.13,0,"Credit Card","FALSE",0
+112,66266,"Lewis, Emily","02/11/2026","13:38","Lunch",7,36,"","","","FALSE",50.7,13.07,5,"Cash","FALSE",0
+103,44667,"Mitchell, Samuel","02/09/2026","21:38","Dinner",5,20,"Kendall Johnson","(875) 694-9313","kendall.johnson3149@example.com","TRUE",17.02,2.28,0,"Cash","FALSE",0
+102,60922,"Hall, Lucas","03/22/2026","14:52","Lunch",6,18,"Ellis Martinez","(767) 236-9909","ellis.martinez3150@example.com","FALSE",63.93,2.89,5,"Credit Card","FALSE",0
+104,65817,"Turner, Andrew","03/06/2026","17:50","Dinner",6,15,"Ellis Young","(812) 723-1605","ellis.young3151@example.com","FALSE",52.99,7.22,15,"Credit Card","TRUE",35.91
+107,58640,"Jackson, Oliver","01/25/2026","21:52","Take-Out",2,30,"Blake Brown","(648) 395-8591","blake.brown3152@example.com","TRUE",103.01,7.5,0,"Cash","FALSE",0
+100,47180,"King, Lily","01/04/2026","20:07","Take-Out",4,6,"","","","FALSE",13.49,1.26,0,"Cash","TRUE",59.66
+106,36759,"Moore, William","03/25/2026","17:18","Take-Out",6,2,"Nico Thomas","(457) 897-4549","nico.thomas3154@example.com","FALSE",50.63,12.74,0,"Credit Card","TRUE",31.87
+106,86369,"Lopez, Isabella","02/28/2026","17:55","Take-Out",1,20,"Kai Williams","(947) 276-3913","kai.williams3155@example.com","TRUE",115.13,3.84,0,"Credit Card","FALSE",0
+101,48840,"Harris, Victoria","03/27/2026","21:21","Dinner",7,5,"Nico Taylor","(805) 927-3943","nico.taylor3156@example.com","TRUE",82.14,20.61,20,"Mobile Payment","FALSE",0
+107,27348,"Allen, Zoe","03/15/2026","11:33","Lunch",6,38,"Finley Johnson","(228) 429-2034","finley.johnson3157@example.com","TRUE",77.4,2.35,15,"Cash","TRUE",21.98
+108,55901,"Carter, Grace","01/31/2026","10:44","Breakfast",6,40,"Milan Garcia","(246) 202-2564","milan.garcia3158@example.com","FALSE",50.01,0.4,10,"Mobile Payment","TRUE",52.68
+112,39257,"Robinson, Ava","03/01/2026","9:44","Breakfast",3,12,"Milan Carter","(598) 904-1108","milan.carter3159@example.com","TRUE",58.46,9.76,0,"Cash","TRUE",6.63
+104,62800,"Machado, Paula","02/10/2026","6:41","Breakfast",7,28,"","","","FALSE",44.07,6.59,10,"Cash","FALSE",0
+106,51869,"Greenwood, Alex","01/06/2026","13:58","Lunch",6,16,"","","","FALSE",84,13.53,5,"Credit Card","TRUE",11.06
+104,65817,"Turner, Andrew","02/05/2026","21:00","Dinner",3,17,"","","","FALSE",98.21,20.51,15,"Cash","FALSE",0
+105,34552,"Nelson, Isabella","03/21/2026","20:57","Dinner",8,24,"","","","FALSE",29.12,6.56,20,"Cash","FALSE",0
+110,34433,"Cheng, Grace","03/30/2026","21:06","Take-Out",8,4,"Milan Wilson","(520) 504-1842","milan.wilson3164@example.com","TRUE",11.38,2.82,20,"Credit Card","FALSE",0
+113,12815,"Baker, Benjamin","02/28/2026","11:53","Lunch",5,40,"Nico Adams","(261) 224-7607","nico.adams3165@example.com","TRUE",64.67,14.49,0,"Mobile Payment","FALSE",0
+110,97341,"Gerstenberger, Mischa","03/28/2026","19:00","Take-Out",5,22,"Morgan Smith","(538) 211-7073","morgan.smith3166@example.com","TRUE",60.6,14.81,10,"Mobile Payment","TRUE",29.6
+101,48840,"Harris, Victoria","03/06/2026","11:54","Lunch",2,33,"Jordan Garcia","(425) 213-5080","jordan.garcia3167@example.com","TRUE",93.92,19.38,10,"Credit Card","TRUE",26.92
+102,18984,"Scott, Ella","01/08/2026","8:19","Breakfast",6,0,"","","","FALSE",11.69,2.99,0,"Credit Card","FALSE",0
+107,66109,"Green, David","02/10/2026","18:52","Take-Out",6,29,"","","","FALSE",66.2,18.4,15,"Credit Card","FALSE",0
+106,80220,"Gonzalez, Mia","03/11/2026","17:26","Dinner",8,45,"Morgan Baker","(614) 732-6181","morgan.baker3170@example.com","TRUE",68.87,2.36,15,"Mobile Payment","FALSE",0
+111,81251,"Patel, Vishnu","03/22/2026","6:53","Breakfast",6,44,"Logan Carter","(578) 234-9963","logan.carter3171@example.com","FALSE",21.24,4.21,5,"Cash","FALSE",0
+104,65817,"Turner, Andrew","01/08/2026","21:46","Dinner",7,26,"Marley Baker","(340) 931-6179","marley.baker3172@example.com","TRUE",35.38,7.03,0,"Cash","FALSE",0
+100,93168,"Martinez, Sophia","02/24/2026","20:16","Take-Out",1,33,"","","","FALSE",85.47,17.35,20,"Mobile Payment","FALSE",0
+112,66266,"Lewis, Emily","03/07/2026","14:26","Lunch",6,42,"Robin Perez","(594) 606-1495","robin.perez3174@example.com","TRUE",56.98,11.01,15,"Credit Card","FALSE",0
+107,27348,"Allen, Zoe","03/07/2026","7:23","Breakfast",4,14,"Skyler Johnson","(434) 871-5636","skyler.johnson3175@example.com","FALSE",29.56,5.86,10,"Cash","TRUE",43.47
+105,57148,"Thomas, Benjamin","02/04/2026","6:54","Breakfast",2,20,"","","","FALSE",33.49,6.76,15,"Credit Card","FALSE",0
+107,80897,"Martinez, Elijah","01/20/2026","6:39","Breakfast",1,24,"Shannon Brown","(568) 947-2674","shannon.brown3177@example.com","TRUE",80.27,13.28,0,"Mobile Payment","TRUE",50.67
+109,15456,"Wright, Matthew","03/03/2026","21:05","Dinner",7,14,"Kai Adams","(595) 436-5270","kai.adams3178@example.com","TRUE",37.07,6.58,0,"Mobile Payment","FALSE",0
+106,98142,"Scott, Olivia","03/08/2026","17:24","Take-Out",5,4,"Devon Smith","(837) 828-4956","devon.smith3179@example.com","TRUE",24.49,5.78,0,"Cash","TRUE",21.75
+100,93168,"Martinez, Sophia","03/16/2026","18:25","Dinner",6,9,"Sidney Phillips","(214) 510-5953","sidney.phillips3180@example.com","TRUE",16.93,2.33,10,"Mobile Payment","TRUE",35.37
+103,74772,"Green, Jacob","01/04/2026","17:05","Take-Out",6,29,"Sidney Taylor","(335) 459-1135","sidney.taylor3181@example.com","FALSE",64,15.53,0,"Cash","FALSE",0
+102,46646,"Perez, Jacob","02/28/2026","10:14","Breakfast",8,24,"","","","FALSE",40.77,8.35,20,"Mobile Payment","TRUE",18.58
+106,69210,"Hernandez, Charlotte","01/06/2026","17:34","Dinner",3,34,"","","","FALSE",40.2,3.38,5,"Cash","FALSE",0
+104,65817,"Turner, Andrew","01/07/2026","12:58","Lunch",6,36,"Nico Campbell","(382) 294-7830","nico.campbell3184@example.com","FALSE",93.74,19.73,0,"Mobile Payment","FALSE",0
+109,38924,"Smith, Emily","01/12/2026","12:49","Lunch",8,26,"Rowan Adams","(306) 382-5389","rowan.adams3185@example.com","TRUE",82.79,24.21,15,"Cash","FALSE",0
+104,62800,"Machado, Paula","01/24/2026","14:21","Lunch",4,1,"Kai Carter","(939) 371-3604","kai.carter3186@example.com","FALSE",34.35,5.61,0,"Credit Card","TRUE",13.57
+109,35623,"Young, Jackson","01/20/2026","12:54","Lunch",6,28,"Kai White","(414) 860-8536","kai.white3187@example.com","FALSE",63.71,17.29,5,"Mobile Payment","FALSE",0
+106,86369,"Lopez, Isabella","02/17/2026","17:00","Dinner",1,7,"Dakota Adams","(332) 538-6350","dakota.adams3188@example.com","FALSE",44.76,0.73,15,"Mobile Payment","FALSE",0
+105,57148,"Thomas, Benjamin","03/17/2026","14:08","Lunch",5,43,"","","","FALSE",33.72,0.45,5,"Mobile Payment","FALSE",0
+103,70761,"Allen, Amelia","01/27/2026","21:57","Dinner",8,12,"","","","FALSE",103.69,20.9,10,"Cash","FALSE",0
+104,65817,"Turner, Andrew","03/25/2026","8:31","Breakfast",4,1,"","","","FALSE",29.34,2.5,20,"Mobile Payment","FALSE",0
+110,51919,"Hernandez, Charlotte","01/08/2026","20:30","Dinner",2,2,"Skyler Clark","(613) 742-4761","skyler.clark3192@example.com","TRUE",113.33,28.93,20,"Cash","TRUE",23.76
+109,15456,"Wright, Matthew","02/15/2026","6:13","Breakfast",3,14,"","","","FALSE",101.01,17.8,15,"Credit Card","FALSE",0
+112,66266,"Lewis, Emily","02/09/2026","18:45","Dinner",8,12,"Casey Wilson","(558) 294-5358","casey.wilson3194@example.com","FALSE",27.5,4.99,10,"Mobile Payment","FALSE",0
+110,12576,"Rodriguez, Mason","01/07/2026","20:07","Dinner",5,31,"Sidney Clark","(875) 475-5767","sidney.clark3195@example.com","FALSE",109.87,28.24,20,"Mobile Payment","FALSE",0
+106,55800,"Clark, Sophia","01/18/2026","13:35","Lunch",8,37,"Jordan Rodriguez","(284) 997-8797","jordan.rodriguez3196@example.com","TRUE",117.51,6.17,20,"Cash","FALSE",0
+110,97341,"Gerstenberger, Mischa","03/05/2026","9:36","Breakfast",1,15,"Ellis King","(636) 680-4239","ellis.king3197@example.com","FALSE",69.47,6.48,15,"Mobile Payment","FALSE",0
+100,83459,"Walker, Mia","01/11/2026","7:15","Breakfast",5,34,"Ellis Thompson","(282) 747-3788","ellis.thompson3198@example.com","TRUE",58.49,7.4,10,"Credit Card","TRUE",8.97
+100,83459,"Walker, Mia","01/24/2026","7:10","Breakfast",4,16,"","","","FALSE",62.16,8.69,5,"Credit Card","FALSE",0
+104,62800,"Machado, Paula","03/09/2026","6:06","Breakfast",8,7,"","","","FALSE",36.43,5.67,5,"Mobile Payment","FALSE",0
+100,83459,"Walker, Mia","01/27/2026","18:58","Take-Out",8,27,"Hayden Martin","(426) 611-1856","hayden.martin3201@example.com","TRUE",110.88,10.9,0,"Cash","FALSE",0
+102,60922,"Hall, Lucas","03/07/2026","6:15","Breakfast",4,1,"Harper Evans","(727) 946-6428","harper.evans3202@example.com","FALSE",99.57,17.36,15,"Mobile Payment","TRUE",48.63
+110,12576,"Rodriguez, Mason","02/09/2026","19:58","Take-Out",4,16,"Jessie Rodriguez","(933) 545-9236","jessie.rodriguez3203@example.com","FALSE",20.13,1.52,5,"Mobile Payment","TRUE",32.06
+107,58640,"Jackson, Oliver","03/10/2026","17:46","Take-Out",5,25,"Hayden Brown","(309) 865-3529","hayden.brown3204@example.com","FALSE",26.93,0.25,0,"Cash","TRUE",8.93
+106,36759,"Moore, William","01/16/2026","8:26","Breakfast",5,2,"Ariel Young","(416) 606-7302","ariel.young3205@example.com","FALSE",77.14,23.1,0,"Credit Card","TRUE",47.61
+113,30361,"Young, Ethan","03/05/2026","20:08","Take-Out",7,2,"Logan Campbell","(329) 710-2067","logan.campbell3206@example.com","FALSE",60.76,8.73,10,"Credit Card","FALSE",0
+103,44667,"Mitchell, Samuel","01/25/2026","18:25","Take-Out",2,14,"","","","FALSE",72.38,1.65,5,"Credit Card","FALSE",0
+111,81251,"Patel, Vishnu","03/26/2026","14:33","Lunch",2,39,"","","","FALSE",102.93,21.53,5,"Cash","TRUE",44.76
+113,30361,"Young, Ethan","03/14/2026","19:50","Take-Out",5,36,"Quinn Harris","(231) 960-2780","quinn.harris3209@example.com","FALSE",9.45,2.29,0,"Cash","TRUE",27.7
+112,71500,"Nelson, Harper","01/25/2026","21:39","Dinner",7,2,"Quinn Carter","(646) 507-2237","quinn.carter3210@example.com","FALSE",45.65,6.56,0,"Credit Card","FALSE",0
+100,93168,"Martinez, Sophia","02/28/2026","19:27","Dinner",7,44,"Emery Moore","(931) 766-3283","emery.moore3211@example.com","FALSE",28.37,1.6,10,"Credit Card","FALSE",0
+102,60922,"Hall, Lucas","01/14/2026","7:03","Breakfast",3,33,"","","","FALSE",9.83,2.22,0,"Credit Card","FALSE",0
+102,18984,"Scott, Ella","03/12/2026","10:48","Breakfast",1,6,"Kai Moore","(670) 710-4921","kai.moore3213@example.com","TRUE",65.31,1.85,0,"Credit Card","FALSE",0
+106,51481,"Lee, Liam","01/21/2026","19:07","Dinner",2,8,"Shannon Young","(710) 487-2516","shannon.young3214@example.com","TRUE",15.44,4.04,15,"Credit Card","FALSE",0
+100,47180,"King, Lily","02/20/2026","11:32","Lunch",3,36,"","","","FALSE",108.67,19.84,0,"Mobile Payment","TRUE",44.28
+104,65817,"Turner, Andrew","01/22/2026","14:39","Lunch",8,26,"","","","FALSE",35.05,8.21,0,"Credit Card","TRUE",19.43
+102,18984,"Scott, Ella","01/22/2026","21:48","Take-Out",2,27,"Dakota Jones","(884) 320-6940","dakota.jones3217@example.com","FALSE",99.86,3.73,20,"Cash","FALSE",0
+106,62293,"Nelson, Harper","03/18/2026","17:15","Dinner",6,24,"Devon Scott","(232) 877-9513","devon.scott3218@example.com","FALSE",49.75,7.98,15,"Mobile Payment","FALSE",0
+109,23112,"Hernandez, Charlotte","03/17/2026","18:53","Dinner",7,40,"Avery Martinez","(322) 585-9505","avery.martinez3219@example.com","FALSE",59.6,3.16,0,"Credit Card","FALSE",0
+113,42819,"Lopez, Isabella","03/02/2026","21:07","Take-Out",4,23,"Ariel Miller","(600) 563-4337","ariel.miller3220@example.com","FALSE",45.76,1.32,10,"Mobile Payment","FALSE",0
+103,12772,"Brown, Olivia","01/16/2026","20:26","Take-Out",3,7,"Jamie Moore","(557) 410-3266","jamie.moore3221@example.com","FALSE",49.18,0.97,0,"Credit Card","FALSE",0
+111,81251,"Patel, Vishnu","01/07/2026","14:07","Lunch",5,45,"Drew Clark","(968) 557-5180","drew.clark3222@example.com","TRUE",114.47,20.76,5,"Mobile Payment","TRUE",22.41
+109,38924,"Smith, Emily","02/07/2026","8:16","Breakfast",6,21,"","","","FALSE",53.2,9.64,15,"Credit Card","FALSE",0
+113,12815,"Baker, Benjamin","01/12/2026","10:54","Breakfast",3,11,"Finley Wright","(283) 468-7267","finley.wright3224@example.com","TRUE",28.85,3.11,0,"Mobile Payment","TRUE",5.44
+108,35565,"Clark, Abigail","01/28/2026","11:46","Lunch",5,3,"Blake Wright","(214) 745-1757","blake.wright3225@example.com","TRUE",16.43,4.86,0,"Mobile Payment","FALSE",0
+100,93168,"Martinez, Sophia","03/18/2026","6:40","Breakfast",4,21,"Casey Moore","(309) 988-5712","casey.moore3226@example.com","FALSE",33.68,8.23,10,"Credit Card","TRUE",46.18
+112,39257,"Robinson, Ava","01/02/2026","17:29","Take-Out",1,44,"","","","FALSE",48.83,10.64,15,"Mobile Payment","FALSE",0
+102,18984,"Scott, Ella","01/15/2026","10:55","Breakfast",4,44,"Robin Phillips","(271) 892-1788","robin.phillips3228@example.com","FALSE",74.47,1.6,0,"Cash","TRUE",53.83
+108,19467,"Brown, Olivia","02/11/2026","13:03","Lunch",6,21,"Parker Carter","(375) 892-9612","parker.carter3229@example.com","TRUE",72.65,13.01,0,"Mobile Payment","TRUE",45.13
+111,81251,"Patel, Vishnu","01/07/2026","7:13","Breakfast",4,9,"Parker Lee","(711) 635-5107","parker.lee3230@example.com","TRUE",32.99,9.68,20,"Mobile Payment","FALSE",0
+107,80897,"Martinez, Elijah","03/04/2026","10:05","Breakfast",5,6,"Kendall Baker","(675) 937-5045","kendall.baker3231@example.com","TRUE",73.81,21.79,0,"Credit Card","FALSE",0
+105,34552,"Nelson, Isabella","03/09/2026","14:11","Lunch",2,33,"Taylor Harris","(402) 876-8423","taylor.harris3232@example.com","FALSE",26.41,0.98,10,"Mobile Payment","FALSE",0
+111,81251,"Patel, Vishnu","02/28/2026","17:15","Take-Out",3,31,"Sage Thomas","(504) 644-8525","sage.thomas3233@example.com","FALSE",38.31,7.79,0,"Mobile Payment","TRUE",47.29
+109,23112,"Hernandez, Charlotte","02/07/2026","14:06","Lunch",7,17,"Emery White","(910) 217-6516","emery.white3234@example.com","TRUE",81.02,7.62,5,"Credit Card","TRUE",12.93
+110,97341,"Gerstenberger, Mischa","01/15/2026","10:46","Breakfast",2,3,"","","","FALSE",82.12,1.79,0,"Cash","FALSE",0
+103,12772,"Brown, Olivia","03/16/2026","21:38","Take-Out",6,16,"Devon Green","(641) 487-1337","devon.green3236@example.com","FALSE",18.77,5.4,0,"Mobile Payment","FALSE",0
+110,51919,"Hernandez, Charlotte","02/22/2026","14:53","Lunch",8,30,"Rowan Carter","(460) 893-3401","rowan.carter3237@example.com","TRUE",97.92,28.23,0,"Mobile Payment","FALSE",0
+101,48840,"Harris, Victoria","03/10/2026","21:27","Take-Out",1,16,"Rowan Moore","(449) 406-8241","rowan.moore3238@example.com","TRUE",44.42,11.43,10,"Mobile Payment","FALSE",0
+112,71500,"Nelson, Harper","03/16/2026","17:32","Take-Out",8,9,"Casey Thompson","(483) 621-9366","casey.thompson3239@example.com","FALSE",67.98,10.2,20,"Credit Card","FALSE",0
+106,51481,"Lee, Liam","01/08/2026","21:40","Dinner",6,14,"Phoenix Allen","(688) 912-7609","phoenix.allen3240@example.com","TRUE",85.38,4.96,20,"Cash","FALSE",0
+105,34552,"Nelson, Isabella","01/17/2026","7:31","Breakfast",5,2,"Harper Anderson","(986) 704-6351","harper.anderson3241@example.com","TRUE",74.12,2.57,15,"Mobile Payment","TRUE",55.74
+101,93883,"Adams, Chloe","01/30/2026","19:20","Dinner",7,34,"","","","FALSE",29.69,6.55,0,"Cash","TRUE",5.06
+113,12815,"Baker, Benjamin","01/16/2026","9:32","Breakfast",3,19,"","","","FALSE",52.92,14.26,0,"Credit Card","FALSE",0
+111,81251,"Patel, Vishnu","02/13/2026","8:08","Breakfast",1,22,"Quinn Williams","(885) 223-6893","quinn.williams3244@example.com","FALSE",80.39,2.48,0,"Credit Card","FALSE",0
+102,60922,"Hall, Lucas","03/29/2026","20:23","Take-Out",6,27,"Quinn Young","(908) 730-5581","quinn.young3245@example.com","TRUE",86.51,18.16,15,"Mobile Payment","FALSE",0
+112,39257,"Robinson, Ava","01/28/2026","7:31","Breakfast",6,43,"Hayden Parker","(893) 525-1011","hayden.parker3246@example.com","TRUE",72.37,11.47,20,"Cash","TRUE",26.79
+102,60922,"Hall, Lucas","02/05/2026","10:39","Breakfast",3,42,"Sage Garcia","(422) 791-2223","sage.garcia3247@example.com","FALSE",24.41,0.63,20,"Credit Card","TRUE",14.55
+109,15456,"Wright, Matthew","03/27/2026","20:29","Take-Out",2,19,"Nico Miller","(251) 321-4474","nico.miller3248@example.com","FALSE",115.35,32.17,0,"Mobile Payment","FALSE",0
+104,65817,"Turner, Andrew","01/31/2026","18:06","Dinner",2,26,"Avery Brown","(439) 883-2743","avery.brown3249@example.com","TRUE",38.59,6.39,0,"Cash","FALSE",0
+101,48840,"Harris, Victoria","02/26/2026","19:23","Take-Out",2,11,"Sawyer Moore","(291) 667-1340","sawyer.moore3250@example.com","FALSE",84.98,2.32,10,"Credit Card","FALSE",0
+105,34552,"Nelson, Isabella","03/11/2026","18:21","Dinner",3,12,"Jessie King","(757) 972-6554","jessie.king3251@example.com","TRUE",24.89,4.43,0,"Mobile Payment","FALSE",0
+105,65176,"Adams, Chloe","03/14/2026","8:05","Breakfast",5,23,"Reese Brown","(449) 688-2827","reese.brown3252@example.com","TRUE",56.56,12.53,20,"Mobile Payment","FALSE",0
+111,81251,"Patel, Vishnu","03/10/2026","14:51","Lunch",6,36,"Riley Scott","(615) 311-5789","riley.scott3253@example.com","FALSE",62.99,10.97,15,"Mobile Payment","FALSE",0
+102,60922,"Hall, Lucas","03/30/2026","9:16","Breakfast",6,38,"Riley Lee","(382) 622-6409","riley.lee3254@example.com","TRUE",87.36,26.01,5,"Cash","FALSE",0
+111,81251,"Patel, Vishnu","02/26/2026","11:50","Lunch",2,29,"Carmen King","(405) 228-7160","carmen.king3255@example.com","TRUE",66.58,14.47,0,"Credit Card","FALSE",0
+110,12576,"Rodriguez, Mason","01/13/2026","6:55","Breakfast",4,30,"Kendall Miller","(485) 833-3218","kendall.miller3256@example.com","TRUE",92.14,25.46,10,"Mobile Payment","FALSE",0
+107,64567,"White, Amelia","02/02/2026","17:50","Take-Out",3,7,"","","","FALSE",36.48,1.85,20,"Mobile Payment","TRUE",34.44
+105,65176,"Adams, Chloe","03/05/2026","14:41","Lunch",6,30,"Tatum Moore","(647) 260-4773","tatum.moore3258@example.com","FALSE",80.14,10.07,5,"Credit Card","FALSE",0
+108,65343,"Lewis, Ethan","01/03/2026","20:41","Take-Out",8,12,"Peyton White","(666) 710-4827","peyton.white3259@example.com","FALSE",40.42,3.49,15,"Credit Card","FALSE",0
+104,62800,"Machado, Paula","02/05/2026","7:05","Breakfast",2,20,"Ellis Lewis","(629) 245-9914","ellis.lewis3260@example.com","TRUE",79.95,16.28,15,"Mobile Payment","FALSE",0
+103,74772,"Green, Jacob","02/27/2026","13:35","Lunch",1,17,"Phoenix Adams","(602) 614-6990","phoenix.adams3261@example.com","FALSE",62.23,9.12,10,"Cash","FALSE",0
+110,12576,"Rodriguez, Mason","03/06/2026","21:35","Take-Out",7,18,"Ariel Evans","(720) 306-6793","ariel.evans3262@example.com","TRUE",61.82,0.32,20,"Mobile Payment","FALSE",0
+105,65176,"Adams, Chloe","03/24/2026","13:02","Lunch",4,30,"Shay Perez","(760) 766-9650","shay.perez3263@example.com","FALSE",110.41,21.29,0,"Credit Card","FALSE",0
+113,42819,"Lopez, Isabella","02/14/2026","19:59","Dinner",6,19,"Morgan Young","(724) 542-2609","morgan.young3264@example.com","TRUE",94.19,3.52,0,"Credit Card","TRUE",19.23
+102,18984,"Scott, Ella","01/06/2026","19:41","Take-Out",1,42,"","","","FALSE",26.96,7.39,0,"Mobile Payment","FALSE",0
+104,62800,"Machado, Paula","03/11/2026","12:23","Lunch",7,43,"Logan Hill","(391) 256-4999","logan.hill3266@example.com","FALSE",60.31,12.83,15,"Credit Card","TRUE",28.92
+108,19467,"Brown, Olivia","01/11/2026","13:30","Lunch",2,30,"","","","FALSE",100.85,29.29,0,"Cash","FALSE",0
+104,65817,"Turner, Andrew","03/13/2026","12:05","Lunch",1,33,"Riley Harris","(975) 828-8366","riley.harris3268@example.com","FALSE",30.07,3.72,15,"Credit Card","FALSE",0
+101,93883,"Adams, Chloe","03/20/2026","10:18","Breakfast",8,0,"Reese Young","(998) 725-3976","reese.young3269@example.com","FALSE",50.06,4.21,0,"Credit Card","FALSE",0
+106,86369,"Lopez, Isabella","01/26/2026","20:57","Take-Out",7,40,"Quinn Campbell","(326) 478-7053","quinn.campbell3270@example.com","FALSE",93.58,21.75,20,"Mobile Payment","FALSE",0
+102,60922,"Hall, Lucas","03/23/2026","18:14","Dinner",2,40,"","","","FALSE",81.15,21.21,0,"Cash","TRUE",24.01
+105,65176,"Adams, Chloe","02/01/2026","17:15","Dinner",6,23,"","","","FALSE",43.61,10.93,10,"Cash","TRUE",23.76
+106,55800,"Clark, Sophia","01/07/2026","11:02","Lunch",6,33,"","","","FALSE",113.84,27.78,10,"Mobile Payment","FALSE",0
+111,81251,"Patel, Vishnu","03/06/2026","7:53","Breakfast",3,3,"Kai Roberts","(640) 856-9043","kai.roberts3274@example.com","FALSE",80.52,14.31,0,"Credit Card","TRUE",44.07
+106,80220,"Gonzalez, Mia","01/21/2026","11:41","Lunch",8,22,"","","","FALSE",33.42,10.01,10,"Credit Card","TRUE",24.32
+109,38924,"Smith, Emily","02/03/2026","8:54","Breakfast",6,35,"Shannon Perez","(323) 776-9717","shannon.perez3276@example.com","TRUE",73.65,9.66,15,"Cash","TRUE",25.91
+111,81251,"Patel, Vishnu","03/15/2026","7:38","Breakfast",2,34,"","","","FALSE",40.64,3.29,15,"Credit Card","FALSE",0
+104,65817,"Turner, Andrew","03/29/2026","20:37","Take-Out",2,28,"Sawyer Young","(365) 448-7058","sawyer.young3278@example.com","FALSE",99.49,11.81,20,"Mobile Payment","FALSE",0
+102,46646,"Perez, Jacob","01/08/2026","7:02","Breakfast",6,11,"Tatum Young","(327) 825-9488","tatum.young3279@example.com","TRUE",44.63,0.11,5,"Credit Card","FALSE",0
+111,81251,"Patel, Vishnu","01/03/2026","21:14","Dinner",5,13,"Hayden Phillips","(647) 473-4355","hayden.phillips3280@example.com","TRUE",9.55,0.85,0,"Mobile Payment","FALSE",0
+104,62800,"Machado, Paula","01/15/2026","6:27","Breakfast",6,29,"Nico Williams","(242) 711-1289","nico.williams3281@example.com","FALSE",35.59,1.71,20,"Cash","FALSE",0
+101,48840,"Harris, Victoria","03/03/2026","10:34","Breakfast",5,44,"Morgan Williams","(323) 644-4407","morgan.williams3282@example.com","TRUE",37.47,1.55,10,"Mobile Payment","FALSE",0
+103,44667,"Mitchell, Samuel","01/14/2026","13:34","Lunch",8,45,"Parker Miller","(657) 697-6717","parker.miller3283@example.com","TRUE",61.68,17.43,5,"Mobile Payment","FALSE",0
+109,35623,"Young, Jackson","03/22/2026","13:43","Lunch",6,37,"Peyton Miller","(908) 810-4730","peyton.miller3284@example.com","FALSE",28.64,6.63,0,"Mobile Payment","TRUE",47.17
+103,70761,"Allen, Amelia","03/02/2026","12:51","Lunch",3,24,"","","","FALSE",117.4,34,20,"Cash","FALSE",0
+107,23101,"Davis, Christopher","02/08/2026","21:24","Dinner",3,39,"Sage Perez","(953) 613-3385","sage.perez3286@example.com","TRUE",46.04,12.82,0,"Credit Card","FALSE",0
+100,47180,"King, Lily","03/21/2026","18:45","Dinner",6,34,"Reese Nelson","(707) 232-9888","reese.nelson3287@example.com","TRUE",36.64,2.29,5,"Mobile Payment","TRUE",27.05
+112,39257,"Robinson, Ava","02/01/2026","20:58","Dinner",7,34,"","","","FALSE",56.27,14.85,15,"Mobile Payment","FALSE",0
+113,30361,"Young, Ethan","01/16/2026","14:36","Lunch",4,22,"Casey Campbell","(731) 907-9564","casey.campbell3289@example.com","FALSE",39.2,2.53,0,"Mobile Payment","TRUE",49.11
+111,81251,"Patel, Vishnu","01/10/2026","20:43","Dinner",2,9,"","","","FALSE",95.61,23.92,0,"Cash","FALSE",0
+105,89472,"Mitchell, Hannah K.","01/14/2026","8:16","Breakfast",6,21,"Frankie Allen","(684) 379-1057","frankie.allen3291@example.com","TRUE",62.79,7.56,15,"Mobile Payment","TRUE",6.96
+101,26008,"Hall, Noah K.","02/04/2026","13:41","Lunch",2,37,"","","","FALSE",74.35,19.8,15,"Mobile Payment","TRUE",44.38
+106,98142,"Scott, Olivia","02/05/2026","12:19","Lunch",1,31,"Blake Garcia","(567) 225-6454","blake.garcia3293@example.com","TRUE",40.62,9.18,20,"Credit Card","FALSE",0
+105,34552,"Nelson, Isabella","02/21/2026","7:26","Breakfast",6,3,"","","","FALSE",93.42,16.37,20,"Mobile Payment","TRUE",40.12
+103,12772,"Brown, Olivia","02/02/2026","14:14","Lunch",8,16,"Drew King","(685) 963-7158","drew.king3295@example.com","TRUE",16.63,2.87,0,"Cash","FALSE",0
+108,13056,"Baker, Samuel","03/13/2026","19:22","Dinner",4,28,"Shay Garcia","(677) 745-6321","shay.garcia3296@example.com","FALSE",34.01,3.92,20,"Cash","FALSE",0
+108,55901,"Carter, Grace","01/26/2026","21:39","Take-Out",6,23,"Jordan Green","(289) 441-4985","jordan.green3297@example.com","TRUE",59.22,6.5,10,"Cash","FALSE",0
+101,48840,"Harris, Victoria","01/06/2026","10:35","Breakfast",3,44,"Hayden Thomas","(398) 386-6376","hayden.thomas3298@example.com","FALSE",18.94,4.93,0,"Mobile Payment","FALSE",0
+102,18984,"Scott, Ella","01/05/2026","21:51","Dinner",6,8,"Shannon Taylor","(638) 384-8137","shannon.taylor3299@example.com","FALSE",49.01,6.04,15,"Cash","FALSE",0
+101,93883,"Adams, Chloe","03/04/2026","17:51","Dinner",3,10,"Kendall Miller","(888) 969-5307","kendall.miller3300@example.com","FALSE",53,1.23,0,"Cash","FALSE",0
+107,58640,"Jackson, Oliver","02/09/2026","10:19","Breakfast",2,36,"","","","FALSE",72.35,18.55,0,"Credit Card","FALSE",0
+103,74772,"Green, Jacob","02/06/2026","21:29","Dinner",3,37,"Avery Lewis","(701) 405-4756","avery.lewis3302@example.com","FALSE",68.05,14.06,0,"Credit Card","FALSE",0
+103,74772,"Green, Jacob","03/11/2026","20:45","Dinner",3,39,"Shannon Brown","(533) 447-8821","shannon.brown3303@example.com","TRUE",68.5,12.56,0,"Mobile Payment","FALSE",0
+113,42819,"Lopez, Isabella","01/15/2026","21:37","Dinner",8,42,"","","","FALSE",75.95,18.4,0,"Cash","FALSE",0
+103,12772,"Brown, Olivia","03/25/2026","11:14","Lunch",8,10,"Sawyer Edwards","(681) 550-8566","sawyer.edwards3305@example.com","TRUE",67.08,17.12,5,"Cash","FALSE",0
+104,62800,"Machado, Paula","03/13/2026","6:32","Breakfast",4,8,"Lennox Phillips","(868) 796-7804","lennox.phillips3306@example.com","TRUE",116.62,11.32,15,"Cash","TRUE",34.73
+111,81251,"Patel, Vishnu","01/07/2026","21:46","Take-Out",7,3,"Parker Baker","(961) 686-5168","parker.baker3307@example.com","TRUE",12.45,1.64,10,"Cash","FALSE",0
+100,83459,"Walker, Mia","02/22/2026","9:46","Breakfast",1,33,"","","","FALSE",40.68,5.92,10,"Mobile Payment","TRUE",44.31
+109,23112,"Hernandez, Charlotte","02/16/2026","8:23","Breakfast",8,12,"Frankie Miller","(405) 291-2720","frankie.miller3309@example.com","FALSE",76.38,1.96,0,"Cash","TRUE",14.55
+108,55901,"Carter, Grace","02/03/2026","14:53","Lunch",2,3,"Parker Anderson","(459) 457-3276","parker.anderson3310@example.com","FALSE",73.04,18.72,20,"Mobile Payment","TRUE",22.89
+104,65817,"Turner, Andrew","02/22/2026","7:09","Breakfast",3,29,"","","","FALSE",115.88,3.73,20,"Credit Card","FALSE",0
+103,12772,"Brown, Olivia","02/27/2026","17:50","Dinner",4,38,"Devon Thomas","(497) 643-6712","devon.thomas3312@example.com","FALSE",28.3,2.25,15,"Cash","FALSE",0
+103,12772,"Brown, Olivia","01/21/2026","17:08","Take-Out",5,7,"","","","FALSE",115.17,20.72,15,"Mobile Payment","TRUE",45.94
+113,34263,"King, Noah","01/12/2026","19:36","Dinner",5,16,"Devon Davis","(313) 873-7136","devon.davis3314@example.com","TRUE",17.73,0.3,0,"Mobile Payment","FALSE",0
+105,57148,"Thomas, Benjamin","02/09/2026","11:26","Lunch",2,14,"Tatum Anderson","(220) 688-5825","tatum.anderson3315@example.com","FALSE",8.42,0.98,10,"Credit Card","FALSE",0
+102,60922,"Hall, Lucas","01/30/2026","21:28","Dinner",7,1,"","","","FALSE",60.69,7.28,0,"Mobile Payment","FALSE",0
+108,31135,"Garcia, Daniel","02/14/2026","19:17","Dinner",5,11,"Devon Smith","(228) 369-7501","devon.smith3317@example.com","FALSE",47.62,7.04,5,"Cash","FALSE",0
+103,44667,"Mitchell, Samuel","02/09/2026","19:32","Take-Out",5,41,"","","","FALSE",42.47,8.15,0,"Mobile Payment","FALSE",0
+102,60922,"Hall, Lucas","02/20/2026","13:08","Lunch",3,18,"Dakota Smith","(850) 631-1749","dakota.smith3319@example.com","FALSE",67.7,6.87,0,"Cash","FALSE",0
+107,58640,"Jackson, Oliver","02/17/2026","6:33","Breakfast",5,17,"","","","FALSE",60.59,5.97,5,"Credit Card","TRUE",34.49
+107,79430,"Carter, Lucas","03/02/2026","17:18","Dinner",2,32,"Robin Campbell","(769) 717-9715","robin.campbell3321@example.com","TRUE",38.68,11.54,5,"Cash","FALSE",0
+105,65176,"Adams, Chloe","01/18/2026","11:11","Lunch",5,16,"","","","FALSE",94.33,27.64,0,"Mobile Payment","FALSE",0
+112,47168,"Wilson, James","02/18/2026","6:00","Breakfast",7,22,"Parker King","(826) 853-3985","parker.king3323@example.com","FALSE",17.3,3.95,0,"Mobile Payment","FALSE",0
+112,66266,"Lewis, Emily","02/03/2026","12:54","Lunch",5,5,"Hayden Mitchell","(923) 517-4973","hayden.mitchell3324@example.com","TRUE",104.51,15.63,5,"Cash","TRUE",34.65
+105,57148,"Thomas, Benjamin","03/08/2026","11:28","Lunch",3,18,"","","","FALSE",42.23,4.77,0,"Mobile Payment","TRUE",12.29
+103,12772,"Brown, Olivia","02/05/2026","12:40","Lunch",4,1,"Rowan Scott","(902) 813-9152","rowan.scott3326@example.com","TRUE",86.91,21.84,10,"Cash","TRUE",19.36
+104,62800,"Machado, Paula","03/21/2026","19:01","Take-Out",4,14,"Jamie Thompson","(708) 438-3503","jamie.thompson3327@example.com","FALSE",43.77,5.24,20,"Credit Card","FALSE",0
+102,18984,"Scott, Ella","01/28/2026","11:32","Lunch",8,22,"","","","FALSE",117.03,1.73,15,"Credit Card","FALSE",0
+113,12815,"Baker, Benjamin","01/25/2026","21:25","Take-Out",3,8,"Devon Young","(290) 588-1819","devon.young3329@example.com","FALSE",73.29,19.51,5,"Cash","FALSE",0
+107,80897,"Martinez, Elijah","03/01/2026","19:51","Take-Out",4,17,"Phoenix Green","(622) 300-8335","phoenix.green3330@example.com","TRUE",33.28,4.91,20,"Mobile Payment","FALSE",0
+100,80238,"Johnson, Michael","01/05/2026","19:19","Dinner",8,25,"Sawyer Hill","(340) 379-8660","sawyer.hill3331@example.com","TRUE",24.61,2.27,0,"Cash","TRUE",33.5
+103,74772,"Green, Jacob","03/30/2026","21:14","Dinner",2,42,"Sidney Harris","(838) 742-5304","sidney.harris3332@example.com","FALSE",53.69,14.29,5,"Cash","FALSE",0
+110,34433,"Cheng, Grace","01/09/2026","14:19","Lunch",4,37,"","","","FALSE",96.11,28.15,10,"Mobile Payment","FALSE",0
+113,34263,"King, Noah","03/31/2026","20:09","Take-Out",1,20,"Tatum Nelson","(267) 822-3712","tatum.nelson3334@example.com","FALSE",81.48,5.05,20,"Mobile Payment","FALSE",0
+108,35565,"Clark, Abigail","01/12/2026","14:05","Lunch",2,5,"","","","FALSE",60.63,9.36,0,"Credit Card","FALSE",0
+107,27348,"Allen, Zoe","02/16/2026","17:04","Take-Out",5,26,"Shannon King","(739) 310-9371","shannon.king3336@example.com","TRUE",113.34,1.54,0,"Cash","FALSE",0
+103,12772,"Brown, Olivia","01/17/2026","20:31","Take-Out",3,12,"Parker Johnson","(951) 688-7939","parker.johnson3337@example.com","FALSE",54.33,3.98,0,"Mobile Payment","FALSE",0
+104,62800,"Machado, Paula","03/30/2026","18:24","Take-Out",1,29,"Kendall Young","(521) 679-2323","kendall.young3338@example.com","TRUE",25.23,3.1,0,"Cash","FALSE",0
+103,74726,"Walker, Grace","01/29/2026","21:44","Take-Out",4,1,"","","","FALSE",106.66,8.71,5,"Mobile Payment","FALSE",0
+102,18984,"Scott, Ella","03/12/2026","17:48","Take-Out",1,38,"","","","FALSE",103.36,27.86,15,"Credit Card","FALSE",0
+102,18984,"Scott, Ella","03/29/2026","12:19","Lunch",3,5,"Peyton Brown","(338) 659-3763","peyton.brown3341@example.com","FALSE",57.65,1.34,5,"Credit Card","FALSE",0
+107,27348,"Allen, Zoe","02/26/2026","19:41","Take-Out",3,28,"Marley Perez","(269) 921-8000","marley.perez3342@example.com","TRUE",89.01,8.2,5,"Credit Card","FALSE",0
+112,39257,"Robinson, Ava","03/25/2026","19:30","Take-Out",5,5,"","","","FALSE",43.02,2.8,5,"Mobile Payment","TRUE",50.48
+108,35565,"Clark, Abigail","01/29/2026","8:04","Breakfast",7,13,"","","","FALSE",87.25,16.29,0,"Mobile Payment","FALSE",0
+104,62800,"Machado, Paula","02/01/2026","18:46","Take-Out",8,30,"Shannon Davis","(444) 696-1816","shannon.davis3345@example.com","TRUE",51.89,1.4,0,"Mobile Payment","FALSE",0
+113,12815,"Baker, Benjamin","03/22/2026","12:56","Lunch",1,29,"Alex Green","(583) 364-5526","alex.green3346@example.com","TRUE",32.66,8.98,0,"Credit Card","FALSE",0
+112,71500,"Nelson, Harper","01/06/2026","11:49","Lunch",8,12,"Peyton Clark","(637) 854-6580","peyton.clark3347@example.com","TRUE",110.16,18.62,0,"Cash","FALSE",0
+105,19226,"Taylor, Ava","03/31/2026","19:42","Take-Out",6,15,"","","","FALSE",101.35,7.04,15,"Credit Card","TRUE",31.6
+108,31135,"Garcia, Daniel","03/10/2026","21:01","Dinner",1,28,"","","","FALSE",51.55,13.74,0,"Mobile Payment","FALSE",0
+105,34552,"Nelson, Isabella","03/29/2026","19:21","Dinner",6,17,"Parker Thompson","(585) 908-7665","parker.thompson3350@example.com","TRUE",109.19,8.39,0,"Cash","FALSE",0
+109,23112,"Hernandez, Charlotte","03/14/2026","8:06","Breakfast",8,28,"","","","FALSE",44,11.7,20,"Cash","FALSE",0
+107,79430,"Carter, Lucas","03/17/2026","19:47","Take-Out",6,34,"","","","FALSE",118.96,1.39,0,"Credit Card","TRUE",27.65
+103,12772,"Brown, Olivia","02/05/2026","11:02","Lunch",6,13,"Ariel Clark","(634) 646-1162","ariel.clark3353@example.com","FALSE",25.8,5.42,0,"Mobile Payment","FALSE",0
+108,55901,"Carter, Grace","03/05/2026","21:30","Dinner",3,18,"Ellis Mitchell","(281) 644-1223","ellis.mitchell3354@example.com","FALSE",88.12,22.65,15,"Cash","FALSE",0
+100,93168,"Martinez, Sophia","01/07/2026","19:19","Dinner",2,38,"Hayden Wright","(203) 849-8313","hayden.wright3355@example.com","TRUE",79.49,13.12,0,"Credit Card","FALSE",0
+102,60922,"Hall, Lucas","03/20/2026","19:12","Take-Out",7,0,"Morgan Lewis","(941) 797-9353","morgan.lewis3356@example.com","TRUE",28.47,1.86,0,"Mobile Payment","FALSE",0
+107,79430,"Carter, Lucas","01/27/2026","10:40","Breakfast",5,30,"","","","FALSE",76.61,6.94,0,"Mobile Payment","FALSE",0
+109,23112,"Hernandez, Charlotte","03/11/2026","9:39","Breakfast",7,17,"Lennox Mitchell","(540) 747-7657","lennox.mitchell3358@example.com","TRUE",51.56,1.48,5,"Credit Card","FALSE",0
+113,34263,"King, Noah","01/14/2026","14:24","Lunch",1,6,"Jordan Young","(504) 294-2008","jordan.young3359@example.com","TRUE",72.26,5.36,10,"Credit Card","FALSE",0
+107,80897,"Martinez, Elijah","02/05/2026","21:14","Dinner",5,33,"Rowan Taylor","(519) 419-4132","rowan.taylor3360@example.com","FALSE",103.42,0.19,10,"Credit Card","FALSE",0
+108,19467,"Brown, Olivia","02/22/2026","10:13","Breakfast",4,9,"","","","FALSE",75.08,2.48,15,"Mobile Payment","FALSE",0
+103,44667,"Mitchell, Samuel","03/19/2026","11:28","Lunch",4,26,"Remy Williams","(281) 328-7879","remy.williams3362@example.com","TRUE",62.35,0.99,15,"Cash","TRUE",29.92
+113,34263,"King, Noah","01/31/2026","13:01","Lunch",2,9,"Harper Moore","(449) 976-9829","harper.moore3363@example.com","TRUE",67.78,6.93,5,"Credit Card","TRUE",24.08
+102,18984,"Scott, Ella","01/15/2026","14:08","Lunch",6,41,"","","","FALSE",51.62,15.12,0,"Credit Card","TRUE",36.3
+111,81251,"Patel, Vishnu","01/31/2026","18:21","Dinner",8,34,"Emery Clark","(413) 816-7427","emery.clark3365@example.com","FALSE",94.08,4.44,0,"Credit Card","TRUE",12.04
+110,34433,"Cheng, Grace","01/11/2026","12:49","Lunch",3,14,"Alex Anderson","(688) 534-2953","alex.anderson3366@example.com","FALSE",86.77,12.96,10,"Cash","TRUE",47.5
+112,66266,"Lewis, Emily","01/14/2026","20:27","Dinner",5,31,"","","","FALSE",98.66,6.96,5,"Mobile Payment","FALSE",0
+112,47168,"Wilson, James","03/04/2026","17:14","Dinner",5,32,"","","","FALSE",14.69,0.12,20,"Mobile Payment","FALSE",0
+109,35623,"Young, Jackson","03/10/2026","11:16","Lunch",8,14,"Dakota Jackson","(562) 277-1383","dakota.jackson3369@example.com","TRUE",117.72,22.52,0,"Mobile Payment","FALSE",0
+103,70761,"Allen, Amelia","03/16/2026","20:46","Take-Out",4,8,"Sage Thompson","(652) 496-2089","sage.thompson3370@example.com","TRUE",46.66,2.62,20,"Credit Card","TRUE",39.72
+105,57148,"Thomas, Benjamin","01/11/2026","21:05","Dinner",2,41,"Morgan Moore","(292) 496-2191","morgan.moore3371@example.com","TRUE",89.35,6.09,0,"Credit Card","TRUE",27.4
+107,64567,"White, Amelia","02/21/2026","19:45","Dinner",2,38,"Harper Lewis","(431) 255-6259","harper.lewis3372@example.com","FALSE",88.89,2.03,10,"Cash","FALSE",0
+112,66266,"Lewis, Emily","02/11/2026","19:36","Dinner",8,26,"","","","FALSE",8.73,1.54,0,"Cash","FALSE",0
+102,18984,"Scott, Ella","01/09/2026","20:41","Dinner",3,10,"Hayden Nelson","(410) 259-9490","hayden.nelson3374@example.com","FALSE",70.15,7.16,20,"Cash","FALSE",0
+106,80220,"Gonzalez, Mia","02/20/2026","20:21","Dinner",5,11,"Nico Taylor","(456) 518-9430","nico.taylor3375@example.com","TRUE",65.85,6.27,0,"Credit Card","FALSE",0
+111,81251,"Patel, Vishnu","03/04/2026","13:28","Lunch",4,15,"","","","FALSE",50.61,10.86,0,"Mobile Payment","FALSE",0
+103,74772,"Green, Jacob","03/25/2026","6:51","Breakfast",1,17,"","","","FALSE",58.12,16.06,0,"Mobile Payment","FALSE",0
+113,42819,"Lopez, Isabella","01/23/2026","10:08","Breakfast",4,43,"Logan Anderson","(699) 352-7122","logan.anderson3378@example.com","TRUE",119.36,2.56,0,"Mobile Payment","TRUE",32.59
+108,55901,"Carter, Grace","03/02/2026","14:39","Lunch",5,9,"Emery Allen","(283) 701-4714","emery.allen3379@example.com","TRUE",26.54,7.88,0,"Cash","FALSE",0
+101,93883,"Adams, Chloe","03/17/2026","21:12","Take-Out",5,32,"","","","FALSE",26.74,3.03,20,"Cash","TRUE",54.71
+110,12576,"Rodriguez, Mason","01/11/2026","6:58","Breakfast",3,32,"Drew Smith","(993) 538-3024","drew.smith3381@example.com","TRUE",48.94,8.49,0,"Credit Card","FALSE",0
+110,51919,"Hernandez, Charlotte","01/05/2026","14:11","Lunch",1,13,"","","","FALSE",113.32,17.51,20,"Cash","TRUE",6.55
+109,88403,"Young, Jackson","02/14/2026","20:01","Dinner",6,38,"Logan Miller","(997) 602-3878","logan.miller3383@example.com","FALSE",9.22,1.92,0,"Credit Card","FALSE",0
+112,47168,"Wilson, James","02/19/2026","8:55","Breakfast",4,31,"","","","FALSE",13.31,2.83,5,"Mobile Payment","FALSE",0
+108,96172,"Roberts, Scarlett","02/20/2026","17:00","Take-Out",4,43,"Sawyer King","(225) 286-8825","sawyer.king3385@example.com","FALSE",116.12,30.84,20,"Cash","TRUE",44.49
+111,81251,"Patel, Vishnu","03/18/2026","21:18","Dinner",3,33,"","","","FALSE",67.43,4.3,20,"Mobile Payment","FALSE",0
+107,80897,"Martinez, Elijah","03/10/2026","17:15","Take-Out",4,5,"Milan Perez","(967) 815-2575","milan.perez3387@example.com","TRUE",73.29,1.09,5,"Credit Card","FALSE",0
+108,65343,"Lewis, Ethan","02/24/2026","18:02","Take-Out",7,2,"","","","FALSE",70.39,3.72,0,"Mobile Payment","TRUE",5.32
+103,70761,"Allen, Amelia","02/17/2026","10:27","Breakfast",3,4,"","","","FALSE",113.21,17.31,10,"Credit Card","TRUE",41.31
+108,13056,"Baker, Samuel","02/06/2026","7:15","Breakfast",2,37,"Skyler Hill","(242) 826-6012","skyler.hill3390@example.com","TRUE",111.73,28.08,5,"Credit Card","FALSE",0
+111,81251,"Patel, Vishnu","03/23/2026","13:32","Lunch",4,20,"Tatum Turner","(931) 858-3301","tatum.turner3391@example.com","TRUE",24.93,5.55,0,"Cash","FALSE",0
+103,74772,"Green, Jacob","01/30/2026","17:57","Take-Out",5,14,"Frankie Turner","(536) 676-7241","frankie.turner3392@example.com","FALSE",66.91,7.22,5,"Cash","FALSE",0
+109,88403,"Young, Jackson","03/05/2026","19:43","Dinner",4,38,"Shay Lee","(998) 456-6847","shay.lee3393@example.com","FALSE",85.59,16.3,0,"Credit Card","FALSE",0
+109,35623,"Young, Jackson","03/13/2026","21:20","Dinner",7,27,"Drew Wilson","(867) 424-9835","drew.wilson3394@example.com","TRUE",50.28,12.86,0,"Mobile Payment","FALSE",0
+106,51481,"Lee, Liam","03/22/2026","13:59","Lunch",2,25,"Sage Allen","(353) 631-6013","sage.allen3395@example.com","TRUE",105.88,25.72,20,"Mobile Payment","FALSE",0
+100,80238,"Johnson, Michael","01/03/2026","21:49","Dinner",1,38,"Devon Green","(227) 550-6076","devon.green3396@example.com","FALSE",73.3,15.35,5,"Mobile Payment","FALSE",0
+110,12576,"Rodriguez, Mason","02/21/2026","18:58","Take-Out",8,23,"Lennox Jones","(954) 220-4696","lennox.jones3397@example.com","FALSE",25.76,4.5,0,"Credit Card","FALSE",0
+100,47180,"King, Lily","02/19/2026","21:38","Take-Out",6,43,"Logan Green","(639) 943-4782","logan.green3398@example.com","TRUE",113.98,9.39,10,"Credit Card","FALSE",0
+102,46646,"Perez, Jacob","03/15/2026","8:17","Breakfast",1,34,"Marley Turner","(460) 968-5802","marley.turner3399@example.com","FALSE",48.79,1.68,0,"Credit Card","FALSE",0
+109,88403,"Young, Jackson","01/08/2026","8:35","Breakfast",6,16,"Sawyer Phillips","(754) 944-7199","sawyer.phillips3400@example.com","FALSE",31.92,2.23,5,"Cash","FALSE",0
+107,23101,"Davis, Christopher","03/10/2026","20:57","Take-Out",6,8,"Frankie Garcia","(459) 664-6388","frankie.garcia3401@example.com","FALSE",55.84,1.21,0,"Mobile Payment","TRUE",54.36
+107,58640,"Jackson, Oliver","02/18/2026","17:01","Dinner",5,34,"","","","FALSE",35.49,6.42,0,"Mobile Payment","TRUE",46.51
+105,19226,"Taylor, Ava","03/12/2026","20:02","Take-Out",1,12,"Morgan Moore","(391) 266-6418","morgan.moore3403@example.com","TRUE",12.74,3.32,0,"Cash","TRUE",53.3
+111,81251,"Patel, Vishnu","02/02/2026","10:18","Breakfast",2,5,"","","","FALSE",69.25,10.84,0,"Credit Card","FALSE",0
+105,89472,"Mitchell, Hannah K.","02/15/2026","21:18","Dinner",3,13,"Jamie Wright","(590) 511-8687","jamie.wright3405@example.com","TRUE",88.33,22.99,0,"Credit Card","FALSE",0
+109,38924,"Smith, Emily","03/15/2026","20:58","Take-Out",8,7,"","","","FALSE",74.75,7.63,10,"Credit Card","FALSE",0
+104,62800,"Machado, Paula","03/30/2026","19:16","Dinner",3,42,"Rowan Jones","(287) 488-6181","rowan.jones3407@example.com","TRUE",35.6,2.61,5,"Credit Card","FALSE",0
+106,36759,"Moore, William","01/31/2026","20:33","Dinner",8,42,"","","","FALSE",98.16,21.22,0,"Mobile Payment","FALSE",0
+112,71500,"Nelson, Harper","01/18/2026","20:17","Dinner",6,33,"Sawyer Jackson","(720) 793-6236","sawyer.jackson3409@example.com","TRUE",98.94,10.73,20,"Mobile Payment","TRUE",35.51
+104,65817,"Turner, Andrew","02/02/2026","13:12","Lunch",3,42,"Hayden Lewis","(778) 228-6178","hayden.lewis3410@example.com","TRUE",83.3,1.83,5,"Mobile Payment","FALSE",0
+105,57148,"Thomas, Benjamin","01/23/2026","21:25","Take-Out",6,39,"","","","FALSE",19.01,1.2,10,"Credit Card","TRUE",14.34
+112,71500,"Nelson, Harper","03/30/2026","18:04","Take-Out",6,26,"","","","FALSE",27.65,2.81,0,"Mobile Payment","FALSE",0
+107,58640,"Jackson, Oliver","01/02/2026","14:34","Lunch",5,30,"Jessie Wilson","(976) 824-3809","jessie.wilson3413@example.com","TRUE",33.46,6.83,0,"Mobile Payment","FALSE",0
+100,80238,"Johnson, Michael","01/06/2026","11:43","Lunch",5,5,"Kai Miller","(804) 962-7595","kai.miller3414@example.com","TRUE",81.03,23.86,5,"Cash","TRUE",23.59
+103,74772,"Green, Jacob","01/21/2026","7:43","Breakfast",2,35,"Ariel Lewis","(257) 932-4400","ariel.lewis3415@example.com","FALSE",38.64,2.68,10,"Mobile Payment","FALSE",0
+110,12576,"Rodriguez, Mason","01/04/2026","20:48","Take-Out",3,16,"Oakley Clark","(977) 267-2342","oakley.clark3416@example.com","FALSE",24.06,2.96,0,"Cash","FALSE",0
+109,35623,"Young, Jackson","02/10/2026","10:45","Breakfast",2,2,"","","","FALSE",96.7,24.7,0,"Mobile Payment","FALSE",0
+105,57148,"Thomas, Benjamin","03/26/2026","6:12","Breakfast",5,43,"","","","FALSE",37.26,3.58,0,"Credit Card","TRUE",36.88
+111,81251,"Patel, Vishnu","03/26/2026","19:56","Take-Out",3,27,"Alex Green","(880) 955-8361","alex.green3419@example.com","TRUE",20.01,4.65,15,"Credit Card","FALSE",0
+110,97341,"Gerstenberger, Mischa","01/21/2026","21:21","Dinner",3,22,"Oakley Perez","(945) 543-4710","oakley.perez3420@example.com","FALSE",29.2,7.51,10,"Mobile Payment","FALSE",0
+105,65176,"Adams, Chloe","01/25/2026","21:04","Take-Out",5,15,"Ellis Baker","(668) 241-1628","ellis.baker3421@example.com","FALSE",37.97,4.41,0,"Credit Card","FALSE",0
+107,27348,"Allen, Zoe","02/15/2026","18:17","Take-Out",8,28,"","","","FALSE",98.06,14.73,0,"Cash","FALSE",0
+105,19226,"Taylor, Ava","01/10/2026","8:01","Breakfast",1,20,"Ariel Young","(642) 597-8263","ariel.young3423@example.com","FALSE",41.05,1.35,5,"Cash","FALSE",0
+109,88403,"Young, Jackson","02/20/2026","11:25","Lunch",1,34,"Sidney Evans","(709) 802-9736","sidney.evans3424@example.com","FALSE",115.22,21.72,0,"Credit Card","FALSE",0
+107,64567,"White, Amelia","03/06/2026","21:30","Take-Out",1,40,"Cameron Allen","(284) 409-4209","cameron.allen3425@example.com","FALSE",104.41,4.66,0,"Mobile Payment","FALSE",0
+108,55901,"Carter, Grace","01/25/2026","21:26","Take-Out",2,33,"","","","FALSE",83.57,0.79,0,"Credit Card","FALSE",0
+112,71500,"Nelson, Harper","01/31/2026","21:08","Dinner",3,8,"Casey Davis","(859) 489-9896","casey.davis3427@example.com","TRUE",38.59,8.24,0,"Mobile Payment","FALSE",0
+111,81251,"Patel, Vishnu","01/24/2026","21:56","Dinner",8,36,"","","","FALSE",34.08,5.56,0,"Mobile Payment","TRUE",24.74
+112,47168,"Wilson, James","03/14/2026","12:47","Lunch",1,37,"Shannon Moore","(940) 572-6482","shannon.moore3429@example.com","TRUE",98.5,7.61,10,"Cash","TRUE",25.69
+104,62800,"Machado, Paula","01/03/2026","11:33","Lunch",7,5,"","","","FALSE",55.59,4.49,20,"Mobile Payment","TRUE",51.59
+105,89472,"Mitchell, Hannah K.","02/16/2026","6:57","Breakfast",4,45,"Hayden Taylor","(375) 545-8211","hayden.taylor3431@example.com","TRUE",69.99,9.9,0,"Cash","FALSE",0
+105,57148,"Thomas, Benjamin","01/18/2026","8:29","Breakfast",7,9,"Shay Adams","(287) 340-4317","shay.adams3432@example.com","FALSE",48.87,6.17,0,"Credit Card","TRUE",14.16
+104,62800,"Machado, Paula","03/05/2026","6:47","Breakfast",3,14,"Milan Jackson","(795) 220-8827","milan.jackson3433@example.com","TRUE",117.16,17.69,0,"Credit Card","FALSE",0
+105,34552,"Nelson, Isabella","01/28/2026","20:03","Dinner",7,31,"Rowan Anderson","(976) 429-5421","rowan.anderson3434@example.com","TRUE",11.09,0.65,0,"Cash","FALSE",0
+108,55901,"Carter, Grace","01/22/2026","21:25","Take-Out",1,37,"Blake Clark","(696) 946-1746","blake.clark3435@example.com","FALSE",57.7,1.99,0,"Mobile Payment","TRUE",10.28
+108,65343,"Lewis, Ethan","01/11/2026","17:22","Dinner",2,11,"Marley Jones","(737) 278-5929","marley.jones3436@example.com","FALSE",118.75,11.38,5,"Credit Card","FALSE",0
+102,60922,"Hall, Lucas","01/15/2026","13:59","Lunch",6,24,"","","","FALSE",114.51,22.27,20,"Mobile Payment","FALSE",0
+111,81251,"Patel, Vishnu","01/09/2026","18:11","Take-Out",6,10,"Cameron Anderson","(529) 345-5905","cameron.anderson3438@example.com","TRUE",39.11,3.95,15,"Cash","FALSE",0
+100,83459,"Walker, Mia","01/19/2026","19:47","Dinner",5,6,"Shay Scott","(999) 275-9258","shay.scott3439@example.com","FALSE",22.11,6.04,20,"Credit Card","TRUE",13.26
+102,18984,"Scott, Ella","03/31/2026","14:28","Lunch",2,22,"Reese Baker","(609) 508-9576","reese.baker3440@example.com","FALSE",56.5,12.65,0,"Mobile Payment","FALSE",0
+111,81251,"Patel, Vishnu","01/09/2026","18:04","Dinner",8,11,"Kendall Thomas","(338) 456-7932","kendall.thomas3441@example.com","TRUE",59.27,5.58,0,"Credit Card","TRUE",20.25
+105,89472,"Mitchell, Hannah K.","03/31/2026","6:34","Breakfast",7,22,"Carmen Wright","(858) 839-4218","carmen.wright3442@example.com","FALSE",24.29,5.23,10,"Cash","TRUE",51.56
+101,93883,"Adams, Chloe","02/27/2026","8:51","Breakfast",6,30,"","","","FALSE",114.65,33.8,20,"Mobile Payment","TRUE",41.33
+102,46646,"Perez, Jacob","03/27/2026","13:52","Lunch",3,14,"","","","FALSE",114.38,30.45,0,"Credit Card","FALSE",0
+103,44667,"Mitchell, Samuel","01/21/2026","9:52","Breakfast",2,12,"Tatum Perez","(891) 313-5470","tatum.perez3445@example.com","TRUE",71.79,1.8,15,"Mobile Payment","FALSE",0
+101,48840,"Harris, Victoria","03/27/2026","17:54","Take-Out",3,40,"Cameron Harris","(724) 236-3396","cameron.harris3446@example.com","TRUE",39.11,0.69,15,"Credit Card","TRUE",9.78
+100,80238,"Johnson, Michael","03/06/2026","18:12","Take-Out",4,1,"Kai Scott","(977) 388-4297","kai.scott3447@example.com","FALSE",54.81,9.64,10,"Credit Card","FALSE",0
+104,62800,"Machado, Paula","01/03/2026","19:00","Take-Out",7,36,"","","","FALSE",33.7,7.25,5,"Cash","FALSE",0
+111,81251,"Patel, Vishnu","02/04/2026","10:32","Breakfast",3,39,"Reese Parker","(987) 241-3039","reese.parker3449@example.com","TRUE",92.2,24.51,0,"Mobile Payment","TRUE",44.66
+108,55901,"Carter, Grace","03/23/2026","10:50","Breakfast",4,23,"","","","FALSE",112.3,30.85,15,"Credit Card","TRUE",8.91
+100,83459,"Walker, Mia","03/26/2026","21:44","Dinner",7,45,"Ellis Lee","(907) 390-9292","ellis.lee3451@example.com","TRUE",119.64,31.05,0,"Cash","FALSE",0
+108,31135,"Garcia, Daniel","01/18/2026","19:10","Take-Out",7,2,"Jamie Adams","(430) 715-2494","jamie.adams3452@example.com","TRUE",113.96,19.9,15,"Credit Card","FALSE",0
+103,44667,"Mitchell, Samuel","03/25/2026","14:12","Lunch",1,34,"Remy Wright","(749) 864-9587","remy.wright3453@example.com","TRUE",53.67,4.99,0,"Cash","TRUE",54.87
+113,42819,"Lopez, Isabella","03/01/2026","8:39","Breakfast",2,24,"","","","FALSE",85.66,2.74,20,"Cash","TRUE",22.93
+100,93168,"Martinez, Sophia","03/14/2026","21:09","Take-Out",8,26,"","","","FALSE",58.22,3.51,0,"Credit Card","FALSE",0
+100,93168,"Martinez, Sophia","01/04/2026","17:48","Dinner",4,44,"Shannon Allen","(219) 506-2605","shannon.allen3456@example.com","TRUE",62.37,6.45,20,"Cash","FALSE",0
+100,47180,"King, Lily","01/28/2026","6:18","Breakfast",8,8,"Remy Nelson","(918) 363-7934","remy.nelson3457@example.com","TRUE",97.58,3.15,15,"Cash","FALSE",0
+112,66266,"Lewis, Emily","03/24/2026","6:05","Breakfast",3,2,"Sidney Anderson","(326) 362-9131","sidney.anderson3458@example.com","TRUE",30.62,5.32,10,"Cash","FALSE",0
+104,65817,"Turner, Andrew","01/10/2026","18:08","Take-Out",2,26,"Milan Lewis","(467) 851-3352","milan.lewis3459@example.com","TRUE",10.4,0.63,15,"Mobile Payment","FALSE",0
+113,12815,"Baker, Benjamin","03/05/2026","18:03","Take-Out",8,3,"Robin Thomas","(770) 404-6234","robin.thomas3460@example.com","FALSE",37.78,7.95,15,"Credit Card","FALSE",0
+108,96172,"Roberts, Scarlett","03/24/2026","7:04","Breakfast",6,6,"","","","FALSE",75.22,11.3,0,"Cash","FALSE",0
+109,35623,"Young, Jackson","03/27/2026","17:24","Take-Out",8,8,"Reese Turner","(823) 356-6388","reese.turner3462@example.com","TRUE",85.25,14.74,15,"Credit Card","FALSE",0
+109,38924,"Smith, Emily","02/28/2026","12:27","Lunch",6,10,"Kai Martin","(416) 710-5332","kai.martin3463@example.com","TRUE",52.85,2.35,20,"Cash","FALSE",0
+102,60922,"Hall, Lucas","02/17/2026","8:23","Breakfast",1,13,"Lennox Jones","(967) 866-9703","lennox.jones3464@example.com","FALSE",85.39,8.78,0,"Cash","TRUE",42.98
+103,74772,"Green, Jacob","03/08/2026","11:51","Lunch",7,34,"Phoenix Evans","(886) 887-5120","phoenix.evans3465@example.com","FALSE",45.05,5.11,0,"Credit Card","FALSE",0
+101,93883,"Adams, Chloe","03/13/2026","10:49","Breakfast",6,16,"","","","FALSE",103.18,5.44,0,"Cash","FALSE",0
+108,55901,"Carter, Grace","02/27/2026","11:43","Lunch",1,0,"Parker Wilson","(842) 431-6260","parker.wilson3467@example.com","FALSE",16.2,4.86,15,"Mobile Payment","FALSE",0
+112,39257,"Robinson, Ava","01/08/2026","18:02","Take-Out",3,25,"","","","FALSE",80.89,12.99,20,"Cash","FALSE",0
+108,35565,"Clark, Abigail","03/11/2026","19:37","Dinner",6,28,"Alex Carter","(704) 592-4209","alex.carter3469@example.com","FALSE",108.91,28.8,15,"Mobile Payment","FALSE",0
+101,93883,"Adams, Chloe","03/18/2026","17:42","Dinner",7,10,"","","","FALSE",72.54,0.3,0,"Cash","FALSE",0
+106,69210,"Hernandez, Charlotte","03/04/2026","13:38","Lunch",3,36,"Hayden Smith","(561) 376-7553","hayden.smith3471@example.com","FALSE",67.02,10.47,0,"Mobile Payment","FALSE",0
+110,97341,"Gerstenberger, Mischa","02/20/2026","12:10","Lunch",6,40,"Kendall Anderson","(973) 416-7253","kendall.anderson3472@example.com","TRUE",80.71,13.29,10,"Credit Card","TRUE",38.64
+112,47168,"Wilson, James","02/07/2026","11:57","Lunch",1,25,"Casey Taylor","(296) 640-5674","casey.taylor3473@example.com","FALSE",86.4,18.12,5,"Cash","FALSE",0
+102,18984,"Scott, Ella","02/26/2026","10:22","Breakfast",3,26,"Robin Clark","(997) 373-3825","robin.clark3474@example.com","FALSE",106.12,26.07,15,"Cash","FALSE",0
+106,69210,"Hernandez, Charlotte","01/02/2026","11:50","Lunch",2,10,"Parker Edwards","(961) 543-7014","parker.edwards3475@example.com","FALSE",109.37,20.81,20,"Mobile Payment","FALSE",0
+107,66109,"Green, David","03/25/2026","20:10","Dinner",5,25,"","","","FALSE",85.47,0.55,0,"Credit Card","FALSE",0
+100,47180,"King, Lily","02/16/2026","6:03","Breakfast",7,7,"Jamie Johnson","(765) 446-4265","jamie.johnson3477@example.com","TRUE",116.53,31.67,10,"Cash","TRUE",15.75
+103,74772,"Green, Jacob","01/12/2026","12:44","Lunch",4,28,"","","","FALSE",53.73,10.58,15,"Credit Card","FALSE",0
+105,57148,"Thomas, Benjamin","02/03/2026","10:21","Breakfast",5,37,"Nico Davis","(460) 427-5712","nico.davis3479@example.com","TRUE",83.39,4.01,5,"Cash","FALSE",0
+105,34552,"Nelson, Isabella","03/30/2026","11:13","Lunch",2,35,"","","","FALSE",37.62,0.49,0,"Cash","FALSE",0
+107,66109,"Green, David","03/22/2026","18:52","Take-Out",3,13,"Finley Parker","(949) 625-9202","finley.parker3481@example.com","FALSE",92.95,20.37,10,"Credit Card","FALSE",0
+112,39257,"Robinson, Ava","02/09/2026","7:58","Breakfast",2,45,"Jessie Roberts","(474) 849-2715","jessie.roberts3482@example.com","TRUE",69.28,19.6,15,"Cash","FALSE",0
+104,62800,"Machado, Paula","02/02/2026","11:01","Lunch",1,34,"Kendall Thomas","(905) 547-8784","kendall.thomas3483@example.com","TRUE",73.72,16.44,0,"Mobile Payment","FALSE",0
+104,65817,"Turner, Andrew","03/23/2026","7:13","Breakfast",7,19,"Avery Scott","(642) 744-3259","avery.scott3484@example.com","TRUE",49.27,1.4,5,"Credit Card","FALSE",0
+113,42819,"Lopez, Isabella","01/27/2026","12:36","Lunch",5,29,"Reese Hill","(437) 687-7708","reese.hill3485@example.com","FALSE",23.28,5.56,20,"Mobile Payment","TRUE",5.41
+102,60922,"Hall, Lucas","01/25/2026","13:19","Lunch",4,37,"","","","FALSE",66.75,11.22,0,"Cash","FALSE",0
+109,23112,"Hernandez, Charlotte","01/11/2026","19:25","Take-Out",5,19,"Sage Phillips","(923) 686-1756","sage.phillips3487@example.com","TRUE",12.54,3.21,0,"Cash","TRUE",47.98
+107,64567,"White, Amelia","01/08/2026","17:13","Dinner",1,25,"Alex Young","(551) 742-1433","alex.young3488@example.com","TRUE",119.71,15.51,20,"Credit Card","TRUE",5.4
+109,38924,"Smith, Emily","01/17/2026","10:12","Breakfast",1,18,"Reese Scott","(504) 256-9172","reese.scott3489@example.com","TRUE",53.5,15.06,0,"Mobile Payment","FALSE",0
+109,23112,"Hernandez, Charlotte","01/11/2026","19:49","Take-Out",1,42,"","","","FALSE",57.64,6.47,15,"Cash","FALSE",0
+108,55901,"Carter, Grace","01/26/2026","11:51","Lunch",6,24,"Tatum Hill","(921) 373-1354","tatum.hill3491@example.com","FALSE",46.59,3.29,0,"Cash","FALSE",0
+104,62800,"Machado, Paula","02/17/2026","20:59","Take-Out",4,8,"Marley Roberts","(500) 384-1079","marley.roberts3492@example.com","TRUE",77.96,23,0,"Credit Card","TRUE",53.72
+108,96172,"Roberts, Scarlett","01/27/2026","18:04","Take-Out",8,41,"","","","FALSE",90.44,18.64,20,"Cash","TRUE",54.91
+106,62293,"Nelson, Harper","03/15/2026","21:28","Dinner",7,14,"Jamie King","(462) 528-8521","jamie.king3494@example.com","FALSE",114.47,7.63,0,"Mobile Payment","FALSE",0
+111,81251,"Patel, Vishnu","02/18/2026","17:57","Dinner",4,29,"","","","FALSE",117.66,26.1,0,"Mobile Payment","FALSE",0
+113,30361,"Young, Ethan","02/18/2026","13:38","Lunch",5,2,"Taylor Wilson","(826) 503-6204","taylor.wilson3496@example.com","TRUE",71.23,12.8,0,"Mobile Payment","FALSE",0
+106,86369,"Lopez, Isabella","02/08/2026","12:20","Lunch",6,12,"Emery Brown","(221) 516-2821","emery.brown3497@example.com","TRUE",9.99,1.11,0,"Cash","FALSE",0
+108,13056,"Baker, Samuel","01/10/2026","14:51","Lunch",5,1,"Reese Wilson","(822) 898-2490","reese.wilson3498@example.com","FALSE",112.79,0.53,0,"Mobile Payment","TRUE",55.07
+105,19226,"Taylor, Ava","03/28/2026","20:01","Dinner",6,33,"","","","FALSE",14.42,4.06,10,"Cash","FALSE",0
+105,19226,"Taylor, Ava","01/14/2026","20:47","Take-Out",6,19,"","","","FALSE",25.68,3.82,10,"Credit Card","TRUE",31.01

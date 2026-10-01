@@ -1,0 +1,11 @@
+.Renviron
+ca.pem
+.Rproj.user/
+.Rhistory
+.RData
+.DS_Store
+*.tracker.rds
+SakilaOLAP.db
+*.log
+log*.txt
+*.bak

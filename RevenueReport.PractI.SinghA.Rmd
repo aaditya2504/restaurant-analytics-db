@@ -1,0 +1,186 @@
+---
+title: "Analyze Sales"
+author: "Aaditya Kumar Singh"
+date: "Spring 2026"
+output: pdf_document
+subtitle: CS5200 Practicum I
+---
+
+```{r setup, include=FALSE}
+# Hide all code from the knitted PDF (as required by rubric)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r load-packages, include=FALSE}
+# Install packages only if not already installed, then load them
+pkgs <- c("RMariaDB", "kableExtra")
+for (p in pkgs) {
+  if (!require(p, character.only = TRUE, quietly = TRUE))
+    install.packages(p, repos = "https://cran.r-project.org")
+  library(p, character.only = TRUE)
+}
+```
+
+```{r connect-db, include=FALSE}
+# Connect to cloud MySQL database only.
+# Do NOT load the CSV or SQLite database in this report.
+con <- dbConnect(
+  MariaDB(),
+  host                   = Sys.getenv("DB_HOST"),
+  port                   = 21819,
+  dbname                 = "defaultdb",
+  user                   = Sys.getenv("DB_USER"),
+  password               = Sys.getenv("DB_PASSWORD"),
+  ssl.ca                 = Sys.getenv("DB_SSL_CA"),
+  ssl.verify.server.cert = FALSE
+)
+```
+
+## Analysis by Restaurant
+
+```{r analysis-by-restaurant}
+# For each restaurant: total visits, unique customers,
+# loyalty program visits, and total spend (food + alcohol, no tips).
+
+q1 <- "
+  SELECT
+    r.restaurant_name                           AS Restaurant,
+    COUNT(v.visit_id)                           AS TotalVisits,
+    COUNT(DISTINCT v.customer_id)               AS UniqueCustomers,
+    SUM(CASE WHEN c.loyalty_member = 1
+             THEN 1 ELSE 0 END)                 AS LoyaltyVisits,
+    ROUND(SUM(v.food_bill + v.alcohol_bill), 2) AS TotalSpent
+  FROM visits v
+  JOIN restaurants r ON v.rid = r.rid
+  LEFT JOIN customers c ON v.customer_id = c.customer_id
+  GROUP BY r.restaurant_name
+  ORDER BY r.restaurant_name;
+"
+
+res1 <- dbGetQuery(con, q1)
+
+kable(res1,
+      col.names = c("Restaurant", "Total Visits", "Unique Customers",
+                    "Loyalty Visits", "Total Spent ($)"),
+      format    = "latex",
+      booktabs  = TRUE,
+      caption   = "Summary of visits and revenue by restaurant") %>%
+  kable_styling(latex_options = c("striped", "hold_position", "scale_down"),
+                font_size = 9)
+```
+
+## Sales and Visit Analytics
+
+```{r sales-analytics}
+# Dynamically find the 3 most recent years (no hard-coding of years)
+years_df <- dbGetQuery(con, "
+  SELECT DISTINCT YEAR(visit_date) AS yr
+  FROM visits
+  WHERE visit_date > '1970-01-01'
+  ORDER BY yr DESC
+  LIMIT 3;
+")
+yr_list <- paste(years_df$yr, collapse = ", ")
+
+# Revenue = discounted food + alcohol (tips excluded)
+# Discount is stored as a decimal proportion (e.g. 0.10 = 10% off)
+q2 <- paste0("
+  SELECT
+    r.restaurant_name                                         AS Restaurant,
+    ROUND(SUM(v.food_bill * (1 - v.food_discount_pct)
+              + v.alcohol_bill), 2)                          AS TotalRevenue,
+    ROUND(AVG(v.food_bill * (1 - v.food_discount_pct)
+              + v.alcohol_bill), 2)                          AS AvgPerParty,
+    ROUND(AVG(v.party_size), 1)                              AS AvgPartySize
+  FROM visits v
+  JOIN restaurants r ON v.rid = r.rid
+  WHERE YEAR(v.visit_date) IN (", yr_list, ")
+  GROUP BY r.restaurant_name
+  ORDER BY r.restaurant_name;
+")
+
+res2 <- dbGetQuery(con, q2)
+
+kable(res2,
+      col.names = c("Restaurant", "Total Revenue ($)",
+                    "Avg Spent / Party ($)", "Avg Party Size"),
+      format    = "latex",
+      booktabs  = TRUE,
+      caption   = paste0("Sales analytics for years: ", yr_list)) %>%
+  kable_styling(latex_options = c("striped", "hold_position", "scale_down"),
+                font_size = 9)
+```
+
+\newpage
+
+## Trend by Month for Florida
+
+```{r florida-trend, fig.width=7, fig.height=4.5, fig.align="center"}
+# Step 1: Find the 2 most recent years for Florida restaurants (no hard-coding)
+fl_years <- dbGetQuery(con, "
+  SELECT DISTINCT YEAR(v.visit_date) AS yr
+  FROM visits v
+  JOIN restaurants r ON v.rid = r.rid
+  WHERE r.state = 'FL'
+    AND v.visit_date > '1970-01-01'
+  ORDER BY yr DESC
+  LIMIT 2;
+")
+fl_yr_list <- paste(fl_years$yr, collapse = ", ")
+
+# Step 2: Average monthly revenue across those 2 years for all FL restaurants
+q3 <- paste0("
+  SELECT
+    sub.mn                          AS month_num,
+    ROUND(AVG(sub.monthly_rev), 2)  AS avg_revenue
+  FROM (
+    SELECT
+      YEAR(v.visit_date)                   AS yr,
+      MONTH(v.visit_date)                  AS mn,
+      SUM(v.food_bill + v.alcohol_bill)    AS monthly_rev
+    FROM visits v
+    JOIN restaurants r ON v.rid = r.rid
+    WHERE r.state = 'FL'
+      AND YEAR(v.visit_date) IN (", fl_yr_list, ")
+      AND v.visit_date > '1970-01-01'
+    GROUP BY yr, mn
+  ) AS sub
+  GROUP BY sub.mn
+  ORDER BY sub.mn;
+")
+
+fl_data <- dbGetQuery(con, q3)
+
+# Step 3: Plot the line chart
+month_labels <- c("Jan","Feb","Mar","Apr","May","Jun",
+                  "Jul","Aug","Sep","Oct","Nov","Dec")
+
+plot(fl_data$month_num, fl_data$avg_revenue,
+     type  = "b",
+     pch   = 19,
+     col   = "steelblue",
+     lwd   = 2,
+     xlab  = "Month",
+     ylab  = "Avg Monthly Revenue ($)",
+     main  = paste0("Florida Restaurants – Avg Monthly Revenue\n(",
+                    paste(fl_years$yr, collapse = " & "), ")"),
+     xaxt  = "n",
+     xlim  = c(0.5, 12.5),
+     ylim  = c(0, max(fl_data$avg_revenue, na.rm = TRUE) * 1.25),
+     cex.main = 0.9)
+
+# Custom x-axis with month abbreviations
+axis(1, at = 1:12, labels = month_labels, cex.axis = 0.75)
+
+# Data labels above each point
+text(fl_data$month_num, fl_data$avg_revenue,
+     labels = paste0("$", format(round(fl_data$avg_revenue), big.mark = ",")),
+     pos = 3, cex = 0.55, col = "darkblue")
+
+# Light grid lines for readability
+grid(col = "gray85")
+```
+
+```{r disconnect-db, include=FALSE}
+dbDisconnect(con)
+```
